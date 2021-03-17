@@ -35,10 +35,10 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen options={{headerShown: false}} name ='Login' component={LoginScreen}/>
-      <Stack.Screen options={{headerShown: false}} name ='Signup' component={SignUpScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='Welcome' component={WelcomeScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='Footer' component={theFooter}/>
+      <Stack.Screen options={{headerShown: false}} name ='Login' component={LoginScreen}/>
+      <Stack.Screen options={{headerShown: false}} name ='Signup' component={SignUpScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='Maths' component={MathsQuiz}/>
             <Stack.Screen options={{headerShown: false}} name ='Notification' component={Notification}/>
             <Stack.Screen options={{headerShown: false}} name ='AllQuiz' component={AllQuizList}/>
