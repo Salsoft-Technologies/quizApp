@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "456505895258",
+    "project_id": "quizz-35a1e",
+    "storage_bucket": "quizz-35a1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456505895258:android:be841db7ab7686edfe6b63",
+        "android_client_info": {
+          "package_name": "com.practiceproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456505895258-cq3rrn9hk7kcecmeas25c90iqbh05spo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.practiceproject",
+            "certificate_hash": "25af01fea81e8110be62206f567a8f27e9d0c08c"
+          }
+        },
+        {
+          "client_id": "456505895258-fq05ojnbdu0jr1ds0vl3a520v002nqgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJG-1x0Ab3AWQrKHqeH1c5NV0MUr8ee3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456505895258-fq05ojnbdu0jr1ds0vl3a520v002nqgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
