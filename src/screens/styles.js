@@ -379,16 +379,57 @@ export default StyleSheet.create({
   },
 
   noAccountView: {
-    flexDirection: 'row', justifyContent: 'center', paddingTop: 20
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingTop: 20,
   },
 
   noAccountText: {
-    color:'white', letterSpacing: 2
+    color: 'white',
+    letterSpacing: 2,
   },
 
   createHereText: {
     color: '#01c293',
-    letterSpacing: 2
+    letterSpacing: 2,
+  },
+
+  loginWithGoogleButton: {
+    flexDirection: 'row',
+    backgroundColor: '#dc4e41',
+    marginTop: 20,
+    padding: 10,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+
+  loginWithGoogleButtonText: {
+    fontWeight: 'bold',
+    color: 'white',
+  },
+
+  loginWithGoogleButtonIcon: {
+    height: 30,
+    width: 30,
+  },
+
+  loginWithFacebookButton: {
+    flexDirection: 'row',
+    backgroundColor: '#219bee',
+    marginTop: 20,
+    padding: 10,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+
+  loginWithFacebookButtonText: {
+    fontWeight: 'bold',
+    color: 'white',
+  },
+
+  loginWithFacebookButtonIcon: {
+    height: 30,
+    width: 30,
   },
 
   //Welcome Screen

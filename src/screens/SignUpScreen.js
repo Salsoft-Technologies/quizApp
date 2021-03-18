@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import {
   View,
   Text,
@@ -10,12 +10,16 @@ import {
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import styles from './styles';
+import { AuthContext } from '../navigation/AuthProvider';
+
 
 function SignUpScreen({navigation}) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
     const [age, setAge] = useState('');
     const [country, setCountry] = useState('');
+
+    const {register} = useContext(AuthContext);
 
   const renderLogo = () => {
     return (
@@ -26,6 +30,7 @@ function SignUpScreen({navigation}) {
       />
     );
   };
+
 
   const signUp = () => {
       if(email != '' & password != '' & age != '' & country != ''){
@@ -47,6 +52,7 @@ function SignUpScreen({navigation}) {
           required={true}
           color="#5e6276"
           keyboardType='email-address'
+          
         />
 
         <TextInput
@@ -57,6 +63,8 @@ function SignUpScreen({navigation}) {
           placeholderTextColor="#5e6276"
           required={true}
           color="#5e6276"
+          secureTextEntry={true}
+          required={true}
         />
 
         
@@ -68,6 +76,7 @@ function SignUpScreen({navigation}) {
           placeholderTextColor="#5e6276"
           required={true}
           color="#5e6276"
+          required={true}
           keyboardType='numeric'
         />
 
@@ -84,7 +93,8 @@ function SignUpScreen({navigation}) {
 
         
 
-        <TouchableOpacity onPress={signUp} style={{paddingTop: 10}}>
+        {/* <TouchableOpacity onPress={signUp} style={{paddingTop: 10}}> */}
+        <TouchableOpacity onPress={()=> register(email, password, age, country)} style={{paddingTop: 10}}>
         <Text style={styles.loginButtonText}>Signup</Text>
         </TouchableOpacity>
 

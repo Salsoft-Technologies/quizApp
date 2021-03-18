@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
   Text,
   View,
@@ -8,9 +8,11 @@ import {
   StatusBar,
 } from 'react-native';
 import styles from './styles';
+import { AuthContext } from '../navigation/AuthProvider';
 
 function WelcomeScreen({navigation}) {
   const [name, setName] = useState('');
+  const {user} = useContext(AuthContext)
   const renderLogo = () => {
     return (
       <Image
@@ -36,12 +38,12 @@ function WelcomeScreen({navigation}) {
 
         {name === '' ? (
           <TouchableOpacity>
-            <Text style={styles.buttonTextEmpty}>E N T E R   Y O U R   N A M E</Text>
+            <Text style={styles.buttonTextEmpty}>E N T E R   Y O U R   N A M E </Text>
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
             onPress={() =>
-              navigation.navigate('Footer', {
+              navigation.navigate('MyTab', {
                 screen: 'Home',
                 params: {name},
               })

@@ -1,0 +1,64 @@
+import React, {useState, createContext, useEffect} from 'react';
+import auth from '@react-native-firebase/auth';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
+
+export const AuthContext = createContext();
+
+export const AuthProvider = ({children}) => {
+  const [user, setUser] = useState(null);
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        setUser,
+        login: async (email, password) => {
+          try {
+            await auth().signInWithEmailAndPassword(email, password);
+          } catch (e) {
+            console.log(e);
+          }
+        },
+
+        googleLogin: async () => {
+          try {
+              //Get the users id token
+            const {idToken} = await GoogleSignin.signIn();
+            console.log(idToken);
+            // // Create a Google credential with the token
+            const googleCredential = auth.GoogleAuthProvider.credential(
+              idToken,
+            );
+            console.log(googleCredential);
+            
+            // Sign-in the user with the credential
+            await auth().signInWithCredential(googleCredential);
+          } catch (e) {
+            console.log(e);
+          }
+        },
+
+        register: async (email, password, age, country) => {
+          try {
+            await auth().createUserWithEmailAndPassword(
+              email,
+              password,
+              age,
+              country,
+            );
+            console.log('successful');
+          } catch (e) {
+            console.log(e);
+          }
+        },
+        logout: async () => {
+          try {
+            await auth().signOut();
+          } catch (e) {
+            console.log(e);
+          }
+        },
+      }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};

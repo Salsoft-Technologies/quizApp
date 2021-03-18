@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import {useState, useContext} from 'react';
 import {
   View,
   Text,
@@ -8,12 +8,15 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {AuthContext} from '../navigation/AuthProvider';
 import styles from './styles';
 
 function LoginScreen({navigation}) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const {login, googleLogin} = useContext(AuthContext);
 
   const renderLogo = () => {
     return (
@@ -25,17 +28,17 @@ function LoginScreen({navigation}) {
     );
   };
 
-  const login = () => {
-      if(email != '' & password != ''){
-          navigation.navigate('Welcome')
-      }else{
-          alert('Enter email and password')
-      }
-  }
+  // const login = () => {
+  //     if(email != '' & password != ''){
+  //         navigation.navigate('Welcome')
+  //     }else{
+  //         alert('Enter email and password')
+  //     }
+  // }
 
   const renderLoginTextBoxes = () => {
-      return(
-        <KeyboardAwareScrollView>
+    return (
+      <KeyboardAwareScrollView>
         <TextInput
           style={styles.textInputBox}
           onChangeText={(text) => setEmail(text)}
@@ -57,20 +60,45 @@ function LoginScreen({navigation}) {
           secureTextEntry={true}
         />
 
-        <TouchableOpacity onPress={login} style={{paddingTop: 10}}>
-        <Text style={styles.loginButtonText}>Login</Text>
+        <TouchableOpacity
+          onPress={() => login(email, password)}
+          style={{paddingTop: 10}}>
+          <Text style={styles.loginButtonText}>Login</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.loginWithGoogleButton}
+          onPress={() => googleLogin()}>
+          <Text style={styles.loginWithGoogleButtonText}>
+            Login with Google
+          </Text>
+          <Image
+            style={styles.loginWithGoogleButtonIcon}
+            source={require('../assets/images/quizIcons/google.png')}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.loginWithFacebookButton}
+          onPress={() => googleLogin()}>
+          <Text style={styles.loginWithFacebookButtonText}>
+            Login with Facebook
+          </Text>
+          <Image
+            style={styles.loginWithFacebookButtonIcon}
+            source={require('../assets/images/quizIcons/fb.png')}
+          />
         </TouchableOpacity>
 
         <View style={styles.noAccountView}>
-            <Text style={styles.noAccountText}>Don't have an account? </Text>
-            <TouchableOpacity onPress={()=> navigation.navigate('Signup')}><Text style={styles.createHereText}>Create here</Text></TouchableOpacity>
+          <Text style={styles.noAccountText}>Don't have an account? </Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+            <Text style={styles.createHereText}>Create here</Text>
+          </TouchableOpacity>
         </View>
-
-        
-       
       </KeyboardAwareScrollView>
-      )
-  }
+    );
+  };
   return (
     <View style={styles.mainWelcomeScreen}>
       <StatusBar backgroundColor="#12172e" />

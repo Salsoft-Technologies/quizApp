@@ -43,11 +43,10 @@ function HomeScreen({navigation, route}) {
   };
 
 
-
   return (
     <View style={styles.mainScreenView}>
     <StatusBar backgroundColor='#2a2b31'/>
-      <Header title= {name}/>
+    <Header title= {name}/>
       {renderCard()}
       {renderTopQuizCategories()}
       <QuizList/>
