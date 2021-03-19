@@ -3,15 +3,25 @@ import {Text, TouchableOpacity, View, Image, StatusBar} from 'react-native';
 import Questions from '../../questions.json';
 import styles from './styles';
 
+import * as firebaseobj from 'firebase';
+import {db} from '../../config';
+
+if (!firebaseobj.apps.length) {
+  firebaseobj.initializeApp(db);
+}
+
+
 function MathsQuiz({navigation}) {
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [checked, setChecked] = useState(false);
+  
   const [incorrectChecked, setIncorrectChecked] = useState(false);
   const [correctDisabled, setCorrectDisabled] = useState(false);
   const [incorrectDisabled, setIncorrectDisabled] = useState(false);
+  const [fetchedQuestions, setFetechedQuestions] = useState([])
 
   const [openAnswers, setOpenAnswers] = useState(false);
   const [answer1, setAnswer] = useState(false);
@@ -19,6 +29,20 @@ function MathsQuiz({navigation}) {
   const [answer3, setAnswer3] = useState(false);
   const [answer4, setAnswer4] = useState(false);
   const [answer5, setAnswer5] = useState(false);
+
+  const fetchData = async () => {
+    const allQuestions = await firebaseobj.database().ref("Questions");
+    allQuestions.on("value", datasnap => {
+      const theQuestions = datasnap.val();
+      setFetechedQuestions(theQuestions);
+      
+
+    })
+  }
+
+  useEffect(()=>{
+    fetchData()
+  }, [])
 
   const renderProgress = () => {
     return (
@@ -274,6 +298,7 @@ function MathsQuiz({navigation}) {
 
   return (
     <View style={styles.mainMathsQuiz}>
+    {console.log(fetchedQuestions[index], 'finalQuestions')}
       <StatusBar backgroundColor="#12172e" />
       {renderQuizHeading()}
       {renderQuestionNo()}

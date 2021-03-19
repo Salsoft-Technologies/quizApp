@@ -99,10 +99,11 @@ function ResultScreen({route, navigation}) {
           <Text style={styles.shareButtonText}>Share Results</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=> navigation.navigate('Footer', {
+        <TouchableOpacity onPress={()=> navigation.navigate('MyTab', {
                 screen: 'Home',
-                params: 'Syed Umer Ali'
+                params: {},
               })} style={styles.newQuizButton}>
+
           <Text style={styles.newQuizText}>Take New Quiz</Text>
         </TouchableOpacity>
       </View>
