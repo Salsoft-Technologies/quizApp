@@ -1,7 +1,13 @@
+import { LogBox } from 'react-native';
+
+LogBox.ignoreLogs(['Setting a timer']);
 import React, {useState, useEffect} from 'react';
+
 import {Text, TouchableOpacity, View, Image, StatusBar} from 'react-native';
-import Questions from '../../questions.json';
+
 import styles from './styles';
+
+import Loader from '../components/AnimatedLoader/index';
 
 import * as firebaseobj from 'firebase';
 import {db} from '../../config';
@@ -30,18 +36,12 @@ function MathsQuiz({navigation}) {
   const [answer4, setAnswer4] = useState(false);
   const [answer5, setAnswer5] = useState(false);
 
-  const fetchData = async () => {
-    const allQuestions = await firebaseobj.database().ref("Questions");
+  useEffect(()=>{
+    const allQuestions = firebaseobj.database().ref("Questions");
     allQuestions.on("value", datasnap => {
       const theQuestions = datasnap.val();
       setFetechedQuestions(theQuestions);
-      
-
     })
-  }
-
-  useEffect(()=>{
-    fetchData()
   }, [])
 
   const renderProgress = () => {
@@ -110,7 +110,7 @@ function MathsQuiz({navigation}) {
   const renderQuestionDescription = () => {
     return (
       <Text style={styles.questionDescription}>
-        {Questions[index].question}
+        {fetchedQuestions[index].question}
       </Text>
     );
   };
@@ -145,7 +145,7 @@ function MathsQuiz({navigation}) {
     setIncorrectChecked(false);
     setCurrentQuestion(currentQuestion + 1);
     const newQuestion = index + 1;
-    if (newQuestion < Questions.length) {
+    if (newQuestion < fetchedQuestions.length) {
       setIndex(newQuestion);
     } else {
       navigation.navigate('Results', {
@@ -164,8 +164,6 @@ function MathsQuiz({navigation}) {
       setAnswer4(false);
       setAnswer5(false);
     }
-
-    // _renderRestart()
   };
 
   const newLevel = (newArray) => {
@@ -180,7 +178,7 @@ function MathsQuiz({navigation}) {
   };
 
   const renderIncorrectAnswer = () => {
-    const newArray = Questions[index].incorrect_answers;
+    const newArray = fetchedQuestions[index].incorrect_answers;
     newLevel(newArray);
     return newArray.map((item, i) => {
       return (
@@ -237,7 +235,7 @@ function MathsQuiz({navigation}) {
                 ? styles.buttonCorrectAnswerText
                 : styles.buttonIncorrectAnswerText
             }>
-            {Questions[index].correct_answer}
+            {fetchedQuestions[index].correct_answer}
           </Text>
           {checked === true ? (
             <Image
@@ -298,13 +296,18 @@ function MathsQuiz({navigation}) {
 
   return (
     <View style={styles.mainMathsQuiz}>
-    {console.log(fetchedQuestions[index], 'finalQuestions')}
-      <StatusBar backgroundColor="#12172e" />
+      {
+        fetchedQuestions[index] ? <View>
+        <StatusBar backgroundColor="#12172e" />
       {renderQuizHeading()}
       {renderQuestionNo()}
       {renderProgress()}
       {renderQuestionDescription()}
       {renderAllAnswers()}
+          
+        </View> : <Loader/>
+      }
+     
       {renderFooter()}
     </View>
   );
