@@ -262,12 +262,12 @@ export default StyleSheet.create({
     color: '#fff',
     fontSize: 25,
     fontWeight: 'bold',
-    paddingTop: 20,
+    paddingTop: 10
   },
 
   topHeaderImage: {
     alignSelf: 'center',
-    paddingTop: 20,
+    paddingTop: 10,
   },
 
   topHeaderImageSize: {

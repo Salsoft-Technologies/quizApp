@@ -42,6 +42,7 @@ function QuizList() {
       quizName: 'Language',
       image: require('../../assets/images/quizIcons/language.png'),
     },
+
   ]);
 
   const _renderFirstItems = ({item}) => {
@@ -67,7 +68,7 @@ function QuizList() {
         renderItem={_renderFirstItems}
         numColumns={3}
         showsVerticalScrollIndicator={false}
-        scrollEnabled={false}
+        scrollEnabled={true}
         keyExtractor={(item, index) => index.toString()}
       />
     </>
