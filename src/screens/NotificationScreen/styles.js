@@ -9,7 +9,7 @@ export default StyleSheet.create({
     
       notificationContainer: {
         flexDirection: 'row',
-        borderRadius: 15,
+        borderRadius: 4 * vw,
         backgroundColor: '#403b5d',
         justifyContent: 'center',
         alignItems: 'center',
@@ -19,28 +19,30 @@ export default StyleSheet.create({
     
       notificationIcon: {
         marginRight: 7 * vw,
-        height: 70,
-        width: 70,
+        // height: 70,
+        // width: 70,
+        height: 11 * vh,
+        width: 18 * vw
       },
     
       notificationTextView: {
-        padding: 30,
+        padding: 7 * vw,
       },
     
       notificationTextAlert: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 2.3 * vh,
         fontWeight: 'bold',
       },
     
       notificationDescriptionText: {
         color: 'lightgrey',
-        fontSize: 16,
+        fontSize: 2.3 * vh,
       },
     
       notificationMainScreen: {
         flex: 1,
         backgroundColor: '#12172e',
-        padding: 20,
+        padding: 5 * vw,
       },
 })

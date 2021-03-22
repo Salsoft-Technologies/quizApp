@@ -1,11 +1,13 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
   touchableRow: {
     flexDirection: 'row',
-    padding: 10,
+    padding: 2.5 * vw ,
     justifyContent: 'space-between',
-    marginHorizontal: 5,
+    marginHorizontal: 1.5 * vw,
   },
 
   rowView: {
@@ -14,29 +16,29 @@ export default StyleSheet.create({
   },
 
   rowText: {
-    paddingLeft: 10,
+    paddingLeft: 2.5 * vw,
     color: '#5d6175',
-    fontSize: 15,
+    fontSize: 2.2 * vh,
   },
 
   rowIcon: {
-    height: 20,
-    width: 20,
+    height: 2.5 * vh,
+    width: 4.5 * vw,
     alignSelf: 'center',
   },
 
   rowIconSize: {
-    height: 30,
-    width: 30,
+    height: 4.5 * vh,
+    width: 6 * vw,
   },
 
   rowIconSize3: {
-    height: 40,
-    width: 40,
+    height: 5.5 * vh,
+    width: 8 * vw,
   },
 
   mainSettingsScreen: {
-    padding: 20,
+    padding: 4 * vw,
     flex: 1,
     backgroundColor: '#12172e',
   },

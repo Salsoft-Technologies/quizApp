@@ -1,43 +1,43 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
   headerView: {
-    // backgroundColor: '#1d2544',
     backgroundColor: '#edf3f6',
-
-    paddingTop: 30,
-    paddingVertical: 40,
-    borderBottomLeftRadius: 100,
+    paddingTop: 3.5 * vh,
+    paddingVertical: 4.5 * vh,
+    borderBottomLeftRadius: 20 * vw,
     borderLeftColor: '#1e1d20',
     borderTopColor: 'transparent',
-    borderLeftWidth: 10,
+    borderLeftWidth: 2.5 * vw,
   },
 
   headerTopHeading: {
     color: '#646364',
     alignSelf: 'center',
-    fontSize: 16,
+    fontSize: 2.3 * vh,
   },
 
   headerSecondHeading: {
     color: '#626164',
     alignSelf: 'center',
-    fontSize: 25,
-    paddingTop: 5,
+    fontSize: 3.5 * vh,
+    paddingTop: 1 * vh,
   },
 
   listBackground: {
     backgroundColor: 'transparent',
-    paddingTop: 5,
+    paddingTop: 1 * vh,
   },
 
   listButton: {
-    marginLeft: 40,
+    marginLeft: 10 * vw,
   },
 
   listImage: {
-    height: 80,
-    width: 80,
+    height: 12 * vh,
+    width: 20 * vw,
   },
 
   subjectStyle: {
@@ -50,22 +50,22 @@ export default StyleSheet.create({
   },
 
   kidsHeading: {
-    fontSize: 20,
-    paddingTop: 10,
+    fontSize: 3 * vh,
+    paddingTop: 1.5 * vh,
     alignSelf: 'center',
     color: '#626164',
     fontWeight: 'bold',
   },
 
   kidsQuizButton: {
-    marginLeft: 60,
+    marginLeft: 15 * vw,
     alignItems: 'center',
-    paddingTop: 10,
+    paddingTop: 1.5 * vh,
   },
 
   kidsButtonIcon: {
-    height: 120,
-    width: 120,
+    height: 20 * vh,
+    width: 28 * vw,
   },
 
   kidsButtonSubjectText: {

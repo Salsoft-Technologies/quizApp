@@ -1,21 +1,23 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
   historyMainView: {
     flexDirection: 'row',
-    padding: 10,
+    padding: 2.5 * vw,
     justifyContent: 'space-between',
     backgroundColor: '#403b5d',
-    borderRadius: 15,
-    marginTop: 10,
-    paddingHorizontal: 20,
+    borderRadius: 3 * vw,
+    marginTop: 1.5 * vh,
+    paddingHorizontal: 5 * vw,
   },
 
   historyCoinsImage: {
     backgroundColor: '#ecf5fe',
-    borderRadius: 15,
-    height: 80,
-    width: 80,
+    borderRadius: 5 * vw,
+    height: 12 * vh,
+    width: 20 * vw,
   },
 
   historyCoinsView: {
@@ -24,7 +26,7 @@ export default StyleSheet.create({
 
   historyTotalCoinsText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 3 * vh,
     fontWeight: 'bold',
   },
 
@@ -33,7 +35,7 @@ export default StyleSheet.create({
   },
 
   historyScoredCoins: {
-    fontSize: 20,
+    fontSize: 3 * vh,
     color: '#10c398',
     fontWeight: 'bold',
   },
@@ -41,6 +43,6 @@ export default StyleSheet.create({
   historyMainScreen: {
     flex: 1,
     backgroundColor: '#12172e',
-    padding: 20,
+    padding: 3 * vh,
   },
 });
