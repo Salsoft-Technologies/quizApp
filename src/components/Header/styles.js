@@ -1,43 +1,45 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
   headerMainView: {
     justifyContent: 'space-between',
     flexDirection: 'row',
     backgroundColor: '#2a2b31',
-    borderBottomStartRadius: 18,
-    borderBottomEndRadius: 18,
-    paddingBottom: 100,
+    borderBottomStartRadius: 4.5 * vw,
+    borderBottomEndRadius: 4.5 * vw,
+    paddingBottom: 15 * vh,
   },
 
   headerRowView: {
     flexDirection: 'row',
-    marginLeft: 20,
-    paddingTop: 10,
+    marginLeft: 5 * vw,
+    paddingTop: 2 * vh,
   },
 
   profilePicture: {
-    height: 50,
-    width: 50,
-    borderRadius: 25,
+    height: 7.5 * vh,
+    width: 13 * vw,
+    borderRadius: 7.5 * vw,
   },
 
   headerTextView: {
     alignSelf: 'center',
-    marginLeft: 15,
+    marginLeft: 3 * vw,
   },
 
   headerTextStyle: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 2.15 * vh,
   },
 
   logoutButton: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 20,
-    marginTop: 10,
+    marginRight: 6 * vw,
+    marginTop: 2 * vh,
   },
 
   logoutButtonText: {

@@ -75,7 +75,7 @@ function ResultScreen({route, navigation}) {
   const renderScore = () => {
     return (
       <View>
-        <Text style={styles.yourScoreText}>Y O U R S C O R E</Text>
+        <Text style={styles.yourScoreText}>Y O U R   S C O R E</Text>
         <Text style={styles.totalAnsweredQuestions}>
           {' '}
           {paramKey}{' '}
@@ -91,7 +91,7 @@ function ResultScreen({route, navigation}) {
       <View>
         <Text style={styles.yourScoreText}>E A R N E D C O I N S</Text>
         {
-          paramKey > 500 ? (
+          paramKey >= 4 ? (
           <View style={styles.coinsView}>
             <Image source={require('../../assets/images/quizIcons/coins.png')} />
 

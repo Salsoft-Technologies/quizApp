@@ -1,30 +1,33 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
+
 
 export default StyleSheet.create({
     textInputBox: {
-        borderBottomWidth: 1,
+        borderBottomWidth: 0.2 * vw,
         borderColor: 'white',
       },
     
       buttonText: {
-        fontSize: 16,
+        fontSize: 2.3 * vh,
         color: '#01c293',
-        paddingTop: 20,
-        alignSelf: 'center',
-        letterSpacing: 2,
+        paddingTop: 3 * vh,
+        letterSpacing: 0.5 * vw,
       },
     
       buttonTextEmpty: {
-        fontSize: 16,
+        fontSize: 2.3 * vh,
         color: '#b50f45',
-        paddingTop: 20,
+        paddingTop: 3 * vh,
         alignSelf: 'center',
-        letterSpacing: 2,
+        letterSpacing: 0.5 * vw,
+
       },
     
       quizLogo: {
-        height: 250,
-        width: 250,
+        height: 30 * vh,
+        width: 70 * vw,
       },
     
       mainWelcomeScreen: {

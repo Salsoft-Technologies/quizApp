@@ -1,4 +1,6 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
     mainScreenView: {
@@ -9,60 +11,60 @@ export default StyleSheet.create({
       mainCardView: {
         flexDirection: 'row',
         backgroundColor: '#000000',
-        marginHorizontal: 20,
-        bottom: 80,
-        borderRadius: 15,
+        marginHorizontal: 4 * vw,
+        bottom: 12 * vh,
+        borderRadius: 3.5 * vw
       },
     
       cardImage: {
-        height: 180,
-        width: 150,
-        borderTopLeftRadius: 15,
-        borderBottomLeftRadius: 15,
+        height: 26 * vh,
+        width: 36 * vw,
+        borderTopLeftRadius: 3.5 * vw,
+        borderBottomLeftRadius: 3.5 * vw,
       },
     
       cardMainTextView: {
         justifyContent: 'center',
-        paddingLeft: 10,
+        paddingLeft: 2 * vw
       },
     
       cardTextView: {
-        padding: 10,
+        padding: 2 * vw,
       },
     
       cardHeadingTextStyle: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 30,
+        fontSize: 4 * vh,
       },
     
       cardSubTextView: {
-        marginBottom: 10,
-        marginLeft: 12,
+        marginBottom: 0.2 * vh,
+        marginLeft: 2 * vw,
       },
     
       cardSubTextStyle: {
         color: '#5c5c5c',
-        fontSize: 14,
+        fontSize: 2 * vh,
       },
     
       mainViewTopCategoriesText: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        bottom: 50,
+        bottom: 7.5 * vh
       },
     
       topCategoriesTextStyle: {
-        fontSize: 20,
+        fontSize: 3 * vh,
         fontWeight: 'bold',
       },
     
       topCategoriesButton: {
         backgroundColor: '#d5f0f6',
         alignSelf: 'center',
-        paddingHorizontal: 15,
-        padding: 5,
-        borderRadius: 10,
+        paddingHorizontal: 2.3 * vh,
+        padding: 1.5 * vw,
+        borderRadius: 2 * vw,
       },
     
       topCategoriesButtonText: {

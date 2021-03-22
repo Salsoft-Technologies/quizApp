@@ -1,32 +1,35 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
+
 
 export default StyleSheet.create({
   categoriesMainView: {
-    height: 100,
-    width: 100,
+    height: 15 * vh,
+    width: 25 * vw,
     backgroundColor: '#ffffff',
     alignSelf: 'center',
-    borderRadius: 15,
-    marginLeft: 15,
-    marginBottom: 20,
+    borderRadius: 2.7 * vw,
+    marginLeft: 2.7 * vw,
+    marginBottom: 2 * vh,
   },
 
   allQuizIcons: {
-    height: 50,
-    width: 50,
+    height: 7.5 * vh,
+    width: 12 * vw,
     alignSelf: 'center',
-    marginTop: 20,
+    marginTop: 2 * vh,
   },
 
   allQuizName: {
-    paddingTop: 10,
+    paddingTop: 2 * vh,
     color: '#484f53',
     alignSelf: 'center',
   },
 
   allQuizList: {
-    bottom: 30,
+    bottom: 4 * vh,
     alignSelf: 'center',
-    marginRight: 5,
+    marginRight: 1 * vw,
   },
 });

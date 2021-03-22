@@ -1,20 +1,10 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
-    notificationHeaderView: {
-        borderBottomColor: '#5d6175',
-        paddingVertical: 10,
-        borderBottomWidth: 1,
-      },
-    
-      notificationHeaderText: {
-        color: '#5d6175',
-        fontSize: 20,
-        fontWeight: 'bold',
-      },
-    
       notificationButtonContainer: {
-        paddingTop: 20,
+        paddingTop: 3 * vh,
       },
     
       notificationContainer: {
@@ -24,11 +14,11 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         justifyContent: 'space-around',
-        paddingLeft: 40,
+        paddingLeft: 10 * vw,
       },
     
       notificationIcon: {
-        marginRight: 30,
+        marginRight: 7 * vw,
         height: 70,
         width: 70,
       },
