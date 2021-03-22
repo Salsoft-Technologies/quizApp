@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import styles from './styles';
-import { AuthContext } from '../navigation/AuthProvider';
+import { AuthContext } from '../../navigation/AuthProvider';
 
 
 function SignUpScreen({navigation}) {
@@ -26,7 +26,7 @@ function SignUpScreen({navigation}) {
       <Image
         resizeMode="center"
         style={styles.quizLogo}
-        source={require('../assets/images/quizIcons/logo.png')}
+        source={require('../../assets/images/quizIcons/logo.png')}
       />
     );
   };

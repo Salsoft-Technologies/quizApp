@@ -2,8 +2,8 @@ import * as React from 'react';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import LoginScreen from '../screens/LoginScreen';
-import SignUpScreen from '../screens/SignUpScreen';
+import LoginScreen from '../screens/LoginScreen/index';
+import SignUpScreen from '../screens/SignUpScreen/index';
 
 function MyLogin(){
     const Stack = createStackNavigator();

@@ -1,5 +1,5 @@
 
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   View,
   Text,
@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {AuthContext} from '../navigation/AuthProvider';
+import {AuthContext} from '../../navigation/AuthProvider';
 import styles from './styles';
 
 
@@ -19,21 +19,12 @@ function LoginScreen({navigation}) {
 
   const {login, googleLogin, fbLogin} = useContext(AuthContext);
 
-  // useEffect(()=>{
-
-  //   const newData = firebaseobj.database().ref('newData');
-  //   newData.set({
-  //     newDataid: 1,
-  //     newDataname: 'Umer'
-  //   });
-  // })
-
   const renderLogo = () => {
     return (
       <Image
         resizeMode="center"
         style={styles.quizLogo}
-        source={require('../assets/images/quizIcons/logo.png')}
+        source={require('../../assets/images/quizIcons/logo.png')}
       />
     );
   };
@@ -76,7 +67,7 @@ function LoginScreen({navigation}) {
           </Text>
           <Image
             style={styles.loginWithGoogleButtonIcon}
-            source={require('../assets/images/quizIcons/google.png')}
+            source={require('../../assets/images/quizIcons/google.png')}
           />
         </TouchableOpacity>
 
@@ -88,7 +79,7 @@ function LoginScreen({navigation}) {
           </Text>
           <Image
             style={styles.loginWithFacebookButtonIcon}
-            source={require('../assets/images/quizIcons/fb.png')}
+            source={require('../../assets/images/quizIcons/fb.png')}
           />
         </TouchableOpacity>
 

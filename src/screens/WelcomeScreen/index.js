@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 import styles from './styles';
-import { AuthContext } from '../navigation/AuthProvider';
+import { AuthContext } from '../../navigation/AuthProvider';
 
 function WelcomeScreen({navigation}) {
   const [name, setName] = useState('');
@@ -18,7 +18,7 @@ function WelcomeScreen({navigation}) {
       <Image
         resizeMode="center"
         style={styles.quizLogo}
-        source={require('../assets/images/quizIcons/logo.png')}
+        source={require('../../assets/images/quizIcons/logo.png')}
       />
     );
   };

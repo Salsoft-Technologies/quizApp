@@ -1,11 +1,10 @@
 import React from 'react';
 import {Text, View, StatusBar, Image, Share} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import Questions from '../../questions.json';
 import styles from './styles';
 
 function ResultScreen({route, navigation}) {
-  const {paramKey} = route.params;
+  const {paramKey, paramKey2} = route.params;
   const renderQuizResultText = () => {
     return (
       <View style={styles.topHeaderView}>
@@ -14,12 +13,13 @@ function ResultScreen({route, navigation}) {
           {paramKey > 3 ? (
             <Image
               style={styles.topHeaderImageSize}
-              source={require('../images/victoryCup.png')}
+              source={require('../../assets/images/mainImages/victoryCup.png')}
+
             />
           ) : (
             <Image
               style={styles.topHeaderImageSize}
-              source={require('../images/lost.png')}
+              source={require('../../assets/images/mainImages/lost.png')}
             />
           )}
         </View>
@@ -79,7 +79,7 @@ function ResultScreen({route, navigation}) {
         <Text style={styles.totalAnsweredQuestions}>
           {' '}
           {paramKey}{' '}
-          <Text style={styles.totalQuestions}>/ {Questions.length}</Text>
+          <Text style={styles.totalQuestions}>/ {paramKey2 ? paramKey2 : 5}</Text>
         </Text>
         {renderCoins()}
       </View>
@@ -93,14 +93,14 @@ function ResultScreen({route, navigation}) {
         {
           paramKey > 500 ? (
           <View style={styles.coinsView}>
-            <Image source={require('../assets/images/quizIcons/coins.png')} />
+            <Image source={require('../../assets/images/quizIcons/coins.png')} />
 
             <Text style={styles.coinsText}>500</Text>
           </View>
         ) : (
           <View style={styles.coinsView}>
             <Image
-              source={require('../assets/images/quizIcons/lessCoins.png')}
+              source={require('../../assets/images/quizIcons/lessCoins.png')}
             />
 
             <Text style={styles.coinsText}>250</Text>
@@ -116,7 +116,7 @@ function ResultScreen({route, navigation}) {
         <TouchableOpacity onPress={() => onShare()} style={styles.shareButton}>
           <Image
             style={styles.shareButtonIcon}
-            source={require('../assets/images/quizIcons/share.png')}
+            source={require('../../assets/images/quizIcons/share.png')}
           />
           <Text style={styles.shareButtonText}>Share Results</Text>
         </TouchableOpacity>

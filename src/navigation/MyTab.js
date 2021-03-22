@@ -2,10 +2,13 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import TabBar from '../components/TabBar/index';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/HomeScreen';
-import Notification from '../screens/NotificationScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-import HistoryScreen from '../screens/HistoryScreen';
+
+import HomeScreen from '../screens/HomeScreen/index';
+import Notification from '../screens/NotificationScreen/index';
+import SettingsScreen from '../screens/SettingsScreen/index';
+import HistoryScreen from '../screens/HistoryScreen/index';
+
+
 
 function MyTab(){
     const Tab = createBottomTabNavigator();

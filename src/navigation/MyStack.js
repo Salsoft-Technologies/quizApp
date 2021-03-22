@@ -2,9 +2,9 @@ import * as React from 'react';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import WelcomeScreen from '../screens/WelcomeScreen';
-import ResultScreen from '../screens/ResultScreen';
-import MathsQuiz from '../screens/MathsQuiz';
+import WelcomeScreen from '../screens/WelcomeScreen/index';
+import ResultScreen from '../screens/ResultScreen/index';
+import MathsQuiz from '../screens/MathsQuiz/index';
 import AllQuizList from '../components/AllQuizList/index';
 
 import MyTab from './MyTab';

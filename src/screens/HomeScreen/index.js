@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, Image, StatusBar, TouchableOpacity, ScrollView} from 'react-native';
-import Header from '../components/Header/index';
-import QuizList from '../components/QuizList/index';
+import Header from '../../components/Header/index';
+import QuizList from '../../components/QuizList/index';
 import styles from './styles';
 
 function HomeScreen({navigation, route}) {
@@ -11,7 +11,8 @@ function HomeScreen({navigation, route}) {
       <View style={styles.mainCardView}>
         <Image
           style={styles.cardImage}
-          source={require('../images/CardImage2.jpg')}
+          source={require('../../assets/images/mainImages/CardImage2.jpg')}
+
         />
 
         <View style={styles.cardMainTextView}>

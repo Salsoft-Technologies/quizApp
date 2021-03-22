@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Text, View, StatusBar, Image, FlatList, TouchableOpacity} from 'react-native';
 import styles from './styles';
-import NotificationHeader from '../components/NotificationHeader/index';
+import NotificationHeader from '../../components/NotificationHeader/index';
 
 function NotificationScreen({route}) {
   const [notify, setNotify] = useState([
@@ -60,7 +60,7 @@ function NotificationScreen({route}) {
           style={styles.notificationContainer}>
           <Image
             style={styles.notificationIcon}
-            source={require('../assets/images/quizIcons/notify.png')}
+            source={require('../../assets/images/quizIcons/notify.png')}
           />
           <View style={styles.notificationTextView}>
             <Text style={styles.notificationTextAlert}>
