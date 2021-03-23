@@ -8,8 +8,9 @@ import {
   StatusBar,
 } from 'react-native';
 import styles from './styles';
+import OptionalFooter from '../OptionalFooter/index';
 
-function AllQuizList({navigation}) {
+function AllQuizList({navigation, route}) {
   const [allList, setAllList] = useState([
     {
       id: 1,
@@ -144,6 +145,8 @@ function AllQuizList({navigation}) {
         numColumns={2}
         keyExtractor={(item, index) => index.toString()}
       />
+      <OptionalFooter title='Show History' customStyle={styles.footerStyle} destination={()=> navigation.navigate('Menu')}/>
+
     </View>
   );
 }

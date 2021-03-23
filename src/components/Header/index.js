@@ -2,9 +2,14 @@ import React, {useContext} from 'react';
 import {Text, View, Image, TouchableOpacity, StatusBar} from 'react-native';
 import styles from './styles';
 import { AuthContext } from '../../navigation/AuthProvider';
+import PropTypes from 'prop-types';
 
 
-function HomeScreen(props) {
+function Header(props) {
+  Header.propTypes = {
+    title: PropTypes.string
+  };
+
   const {logout} = useContext(AuthContext);
   const { user } = useContext(AuthContext);
   
@@ -14,7 +19,6 @@ function HomeScreen(props) {
         <View style={styles.headerRowView}>
         <Image style={styles.profilePicture} source={require('../../assets/images/quizIcons/logo.png')}/>
         <View style={styles.headerTextView}>
-        {/* <Text style={styles.headerTextStyle}>{props.title}</Text> */}
         <Text style={styles.headerTextStyle}>{user ? props.title : user.email}</Text>
         </View>
         </View>
@@ -36,4 +40,4 @@ function HomeScreen(props) {
 }
 
 
-export default HomeScreen
+export default Header

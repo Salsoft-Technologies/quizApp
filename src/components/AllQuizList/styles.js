@@ -5,7 +5,7 @@ import vh from '../../utils/units/vh';
 export default StyleSheet.create({
   headerView: {
     backgroundColor: '#a6ccff',
-    paddingTop: 3.5 * vh,
+    paddingTop: 1.5 * vh,
     paddingVertical: 4.5 * vh,
     borderBottomLeftRadius: 20 * vw,
     borderLeftColor: '#1e1d20',
@@ -80,4 +80,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#141733',
   },
+
+  footerStyle:{
+    flexDirection: 'row', alignItems: 'center', top: 0.7 * vh, justifyContent: 'flex-end', padding: 3.3 * vw}
 });
