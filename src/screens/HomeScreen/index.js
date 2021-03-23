@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Text, View, Image, StatusBar, TouchableOpacity, ScrollView} from 'react-native';
 import Header from '../../components/Header/index';
 import QuizList from '../../components/QuizList/index';
 import styles from './styles';
 
+
+
 function HomeScreen({navigation, route}) {
   const { name } = route.params;
+
   const renderCard = () => {
     return (
       <View style={styles.mainCardView}>

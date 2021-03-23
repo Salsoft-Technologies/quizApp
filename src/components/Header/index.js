@@ -6,13 +6,16 @@ import { AuthContext } from '../../navigation/AuthProvider';
 
 function HomeScreen(props) {
   const {logout} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  
     const renderHeader = () => {
       return (
         <View style={styles.headerMainView}>
         <View style={styles.headerRowView}>
         <Image style={styles.profilePicture} source={require('../../assets/images/quizIcons/logo.png')}/>
         <View style={styles.headerTextView}>
-        <Text style={styles.headerTextStyle}>{props.title}</Text>
+        {/* <Text style={styles.headerTextStyle}>{props.title}</Text> */}
+        <Text style={styles.headerTextStyle}>{user ? props.title : user.email}</Text>
         </View>
         </View>
 

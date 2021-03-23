@@ -30,15 +30,6 @@ function SignUpScreen({navigation}) {
     );
   };
 
-
-  const signUp = () => {
-      if(email != '' & password != '' & age != '' & country != ''){
-          navigation.navigate('Welcome')
-      }else{
-          alert('Some fields are missing');
-      }
-  }
-
   const renderSignUpTextBoxes = () => {
       return(
         <KeyboardAwareScrollView>

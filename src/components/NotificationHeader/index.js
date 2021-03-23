@@ -13,9 +13,9 @@ function NotificationHeader(props){
   };
 
   return(
-      <View>
+      <>
           {notificationHeader()}
-      </View>
+      </>
   )
 }
 

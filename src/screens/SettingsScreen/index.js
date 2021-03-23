@@ -4,12 +4,12 @@ import { ScrollView } from 'react-native-gesture-handler';
 import NotificationHeader from '../../components/NotificationHeader/index';
 import styles from './styles';
 
-function SettingsScreen(){
+function SettingsScreen({navigation}){
 
     const renderQuizBar = () => {
         return(
             <ScrollView>
-            <TouchableOpacity style={styles.touchableRow}>
+            <TouchableOpacity onPress={()=> navigation.navigate('AllQuiz')} style={styles.touchableRow}>
                 <View style={styles.rowView}>
                 <Image source={require('../../assets/images/quizIcons/quizSettingIcon.png')}/>
                 <Text style={styles.rowText}>TAKE QUIZ</Text>
@@ -17,7 +17,7 @@ function SettingsScreen(){
                 <Image style={styles.rowIcon} source={require('../../assets/images/quizIcons/greater.png')}/>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.touchableRow}>
+            <TouchableOpacity onPress={()=> navigation.navigate('Notification')} style={styles.touchableRow}>
                 <View style={styles.rowView}>
                 <Image style={styles.rowIconSize} source={require('../../assets/images/quizIcons/alertSetting.png')}/>
                 <Text style={styles.rowText}>NOTIFICATIONS</Text>
@@ -25,7 +25,7 @@ function SettingsScreen(){
                 <Image style={styles.rowIcon} source={require('../../assets/images/quizIcons/greater.png')}/>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.touchableRow}>
+            <TouchableOpacity onPress={()=> navigation.navigate('About')} style={styles.touchableRow}>
                 <View style={styles.rowView}>
                 <Image style={styles.rowIconSize3} source={require('../../assets/images/quizIcons/about.png')}/>
                 <Text style={styles.rowText}>ABOUT</Text>
