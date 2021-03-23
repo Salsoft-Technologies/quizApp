@@ -1,39 +1,41 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
   loginButtonText: {
-    fontSize: 16,
+    fontSize: 2.3 * vh,
     color: '#01c293',
-    paddingTop: 20,
+    paddingTop: 3 * vh,
     alignSelf: 'center',
-    letterSpacing: 4,
+    letterSpacing: 1 * vw,
   },
 
   noAccountView: {
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingTop: 20,
+    paddingTop: 3 * vh,
   },
 
   noAccountText: {
     color: 'white',
-    letterSpacing: 2,
+    letterSpacing: 0.5 * vw,
   },
 
   createHereText: {
     color: '#01c293',
-    letterSpacing: 2,
+    letterSpacing: 0.5 * vw,
   },
 
   //Welcome Screen
   textInputBox: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 0.3 * vw,
     borderColor: 'white',
   },
 
   quizLogo: {
-    height: 250,
-    width: 250,
+    height: 36.5 * vh,
+    width: 61 * vw,
   },
 
   mainWelcomeScreen: {

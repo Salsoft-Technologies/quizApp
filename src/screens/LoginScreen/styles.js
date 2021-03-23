@@ -1,35 +1,38 @@
 import {StyleSheet} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
    loginButtonText: {
-    fontSize: 16,
+    fontSize: 2.3 * vh,
     color: '#01c293',
-    paddingTop: 20,
+    paddingTop: 3 * vh,
     alignSelf: 'center',
-    letterSpacing: 4,
+    letterSpacing: 1 * vw,
   },
 
   noAccountView: {
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingTop: 20,
+    paddingTop: 3 * vh,
   },
 
   noAccountText: {
     color: 'white',
-    letterSpacing: 2,
+    letterSpacing: 0.5 * vw,
+
   },
 
   createHereText: {
     color: '#01c293',
-    letterSpacing: 2,
+    letterSpacing: 0.5 * vw,
   },
 
   loginWithGoogleButton: {
     flexDirection: 'row',
     backgroundColor: '#dc4e41',
-    marginTop: 20,
-    padding: 10,
+    marginTop: 3 * vh,
+    padding: 2.5 * vw,
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },
@@ -40,15 +43,16 @@ export default StyleSheet.create({
   },
 
   loginWithGoogleButtonIcon: {
-    height: 30,
-    width: 30,
+    height: 4.5 * vh,
+    width: 6.5 * vw,
+
   },
 
   loginWithFacebookButton: {
     flexDirection: 'row',
     backgroundColor: '#219bee',
-    marginTop: 20,
-    padding: 10,
+    marginTop: 3 * vh,
+    padding: 2.5 * vw,
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },
@@ -59,8 +63,8 @@ export default StyleSheet.create({
   },
 
   loginWithFacebookButtonIcon: {
-    height: 30,
-    width: 30,
+    height: 4.5 * vh,
+    width: 6.5 * vw,
   },
   
   textInputBox: {
@@ -69,24 +73,24 @@ export default StyleSheet.create({
   },
 
   buttonText: {
-    fontSize: 16,
+    fontSize: 2.3 * vh,
     color: '#01c293',
-    paddingTop: 20,
+    paddingTop: 3 * vh,
     alignSelf: 'center',
-    letterSpacing: 2,
+    letterSpacing: 1 * vw,
   },
 
   buttonTextEmpty: {
-    fontSize: 16,
+    fontSize: 2.3 * vh,
     color: '#b50f45',
-    paddingTop: 20,
+    paddingTop: 3 * vh,
     alignSelf: 'center',
-    letterSpacing: 2,
+    letterSpacing: 1 * vw,
   },
 
   quizLogo: {
-    height: 250,
-    width: 250,
+    height: 36.5 * vh,
+    width: 61 * vw,
   },
 
   mainWelcomeScreen: {

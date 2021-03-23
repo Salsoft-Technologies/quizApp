@@ -1,5 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 
 const Tab = ({tab, icon, onPress, color, selected, text}) => {
   return (
@@ -52,20 +54,20 @@ const Tab = ({tab, icon, onPress, color, selected, text}) => {
 const styles = StyleSheet.create({
   mainView: {
     flexDirection: 'row',
-    borderRadius: 15,
-    paddingHorizontal: 15,
+    borderRadius: 2.8 * vw,
+    paddingHorizontal: 3.5 * vw,
   },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 15,
+    padding: 2.5 * vw,
     flexDirection: 'row',
   },
 
   navIconSize: {
-    height: 25,
-    width: 25,
+    height: 3.8 * vh,
+    width: 2.8 * vh,
   },
 
   navTextStyle: {
@@ -73,7 +75,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontWeight: 'bold',
     color: '#36d8f7',
-    marginLeft: 5,
+    marginLeft: 1.5 * vw,
   },
 });
 

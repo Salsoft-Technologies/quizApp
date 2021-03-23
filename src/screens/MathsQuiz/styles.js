@@ -138,14 +138,12 @@ export default StyleSheet.create({
       quitButtonText: {
         alignSelf: 'center',
         color: '#9e9fa5',
-        // paddingLeft: 5,
         paddingLeft: 1.5 * vw,
 
       },
     
       nextButton: {
         backgroundColor: '#06d1f4',
-        // paddingHorizontal: 60,
         paddingHorizontal: 15 * vw,
         alignSelf: 'center',
         paddingVertical: 3.5 * vw,

@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, Text, Dimensions} from 'react-native';
+import vw from '../../utils/units/vw';
+import vh from '../../utils/units/vh';
 import Tab from './Tab';
 
 const {width} = Dimensions.get('screen');
@@ -43,7 +45,7 @@ const TabBar = ({state, navigation}) => {
 const styles = StyleSheet.create({
   wrapper: {
     width,
-    padding: 5,
+    padding: 1.5 * vw,
     alignItems: 'center',
     justifyContent: 'center',
   },

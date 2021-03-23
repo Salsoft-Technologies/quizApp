@@ -18,7 +18,6 @@ function SignUpScreen({navigation}) {
     const [password, setPassword] = useState();
     const [age, setAge] = useState('');
     const [country, setCountry] = useState('');
-
     const {register} = useContext(AuthContext);
 
   const renderLogo = () => {

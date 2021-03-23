@@ -19,8 +19,6 @@ export default StyleSheet.create({
     
       notificationIcon: {
         marginRight: 7 * vw,
-        // height: 70,
-        // width: 70,
         height: 11 * vh,
         width: 18 * vw
       },
