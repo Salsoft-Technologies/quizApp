@@ -4,13 +4,13 @@ import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
   headerView: {
-    backgroundColor: '#edf3f6',
+    backgroundColor: '#a6ccff',
     paddingTop: 3.5 * vh,
     paddingVertical: 4.5 * vh,
     borderBottomLeftRadius: 20 * vw,
     borderLeftColor: '#1e1d20',
     borderTopColor: 'transparent',
-    borderLeftWidth: 2.5 * vw,
+    borderLeftWidth: 3.5 * vw,
   },
 
   headerTopHeading: {
@@ -32,12 +32,12 @@ export default StyleSheet.create({
   },
 
   listButton: {
-    marginLeft: 10 * vw,
+    marginLeft: 13 * vw,
   },
 
   listImage: {
-    height: 12 * vh,
-    width: 20 * vw,
+    height: 8 * vh,
+    width: 14 * vw,
   },
 
   subjectStyle: {
@@ -58,14 +58,14 @@ export default StyleSheet.create({
   },
 
   kidsQuizButton: {
-    marginLeft: 15 * vw,
+    marginLeft: 18 * vw,
     alignItems: 'center',
     paddingTop: 1.5 * vh,
   },
 
   kidsButtonIcon: {
-    height: 20 * vh,
-    width: 28 * vw,
+    height: 12 * vh,
+    width: 22 * vw,
   },
 
   kidsButtonSubjectText: {
@@ -78,6 +78,6 @@ export default StyleSheet.create({
 
   allQuizListMainPage: {
     flex: 1,
-    backgroundColor: '#1d2544',
+    backgroundColor: '#141733',
   },
 });

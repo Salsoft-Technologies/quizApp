@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   FlatList,
   StatusBar,
-  ScrollView,
 } from 'react-native';
 import styles from './styles';
 
