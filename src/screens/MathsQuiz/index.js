@@ -19,7 +19,6 @@ if (!firebaseobj.apps.length) {
 
 function MathsQuiz({navigation}) {
   const [currentQuestion, setCurrentQuestion] = useState(1);
-
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [checked, setChecked] = useState(false);

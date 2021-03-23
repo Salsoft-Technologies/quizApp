@@ -1,7 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Text, View, Image, FlatList} from 'react-native';
 import styles from './styles';
 import NotificationHeader from '../../components/NotificationHeader/index';
+
+import * as firebaseobj from 'firebase';
+import {db} from '../../../config';
+if (!firebaseobj.apps.length) {
+    firebaseobj.initializeApp(db);
+  }
 
 function HistoryScreen(){
     const [history, setHistory] = useState([
@@ -87,6 +93,14 @@ function HistoryScreen(){
         },
 
     ])
+
+    useEffect(()=>{
+        const theDetails = firebaseobj.database().ref('Details');
+        theDetails.on('value', datasnap=>{
+            const newDetails = datasnap.val()
+            console.log(newDetails);
+        })
+    })
     const _renderHistory = ({item}) => {
         return(
             <View style={styles.historyMainView}>

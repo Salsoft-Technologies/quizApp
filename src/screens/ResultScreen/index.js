@@ -1,10 +1,39 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Text, View, StatusBar, Image, Share} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import styles from './styles';
+import * as firebaseobj from 'firebase';
+import {db} from '../../../config';
+
+if (!firebaseobj.apps.length) {
+  firebaseobj.initializeApp(db);
+}
+
+import {AuthContext} from '../../navigation/AuthProvider';
 
 function ResultScreen({route, navigation}) {
   const {paramKey, paramKey2} = route.params;
+  const { user } = useContext(AuthContext);
+
+  useEffect(()=> {
+    const date = new Date().getDate();
+    const month = new Date().getMonth() + 1;
+    const year = new Date().getFullYear();
+    const hours = new Date().getHours();
+    const minutes = new Date().getMinutes();
+    const seconds = new Date().getSeconds();
+    const currentDate = date + '-'+ month + '-' +  year;
+    const currentTime = hours + ':' + minutes + ':' + seconds;
+    const Details = firebaseobj.database().ref("Details");
+    Details.push({
+      userId: user.uid,
+      userEmail: user.email,
+      userScore: paramKey,
+      playedDate: currentDate,
+      playedTime: currentTime
+
+    })
+  })
   const renderQuizResultText = () => {
     return (
       <View style={styles.topHeaderView}>

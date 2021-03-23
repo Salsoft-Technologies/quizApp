@@ -1,8 +1,7 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, Image} from 'react-native';
+import {Text, TouchableOpacity, Image} from 'react-native';
 import styles from './styles';
 import PropTypes from 'prop-types';
-
 
 function optionalFooter(props, navigation){
     optionalFooter.propTypes = {
