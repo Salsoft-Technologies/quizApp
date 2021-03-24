@@ -26,7 +26,6 @@ export default StyleSheet.create({
 
   historyTotalCoinsText: {
     color: 'white',
-    fontSize: 2.5 * vh,
     fontWeight: 'bold',
   },
 
