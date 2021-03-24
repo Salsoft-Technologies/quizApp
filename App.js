@@ -25,7 +25,10 @@ function App() {
       webClientId: '456505895258-fq05ojnbdu0jr1ds0vl3a520v002nqgc.apps.googleusercontent.com',
     });
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    
     return subscriber;
+
+   
     
   }, [])
 

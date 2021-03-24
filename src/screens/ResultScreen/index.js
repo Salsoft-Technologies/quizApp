@@ -12,8 +12,9 @@ if (!firebaseobj.apps.length) {
 import {AuthContext} from '../../navigation/AuthProvider';
 
 function ResultScreen({route, navigation}) {
-  const {paramKey, paramKey2} = route.params;
+  const {paramKey, paramKey2, name} = route.params;
   const { user } = useContext(AuthContext);
+
 
   useEffect(()=> {
     const date = new Date().getDate();
@@ -30,7 +31,8 @@ function ResultScreen({route, navigation}) {
       userEmail: user.email,
       userScore: paramKey,
       playedDate: currentDate,
-      playedTime: currentTime
+      playedTime: currentTime,
+      
 
     })
   })

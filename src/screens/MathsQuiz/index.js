@@ -16,7 +16,6 @@ if (!firebaseobj.apps.length) {
   firebaseobj.initializeApp(db);
 }
 
-
 function MathsQuiz({navigation}) {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [index, setIndex] = useState(0);

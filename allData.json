@@ -1,0 +1,120 @@
+{
+  "Details" : [ {
+    "playedDate" : "",
+    "playedTime" : "",
+    "userEmail" : "",
+    "userId" : 1,
+    "userScore" : 1
+  },
+
+  {
+    "playedDate" : "",
+    "playedTime" : "",
+    "userEmail" : "",
+    "userId" : 2,
+    "userScore" : 2
+  }
+],
+
+  "Questions" : [ {
+    "All_answers" : [ "Are parallel", "Intersect at two points", "Intersect at one point", "Perpendicular" ],
+    "answer_options" : [ {
+      "answerText" : "Are parallel",
+      "isCorrect" : false
+    }, {
+      "answerText" : "Intersect at two points",
+      "isCorrect" : false
+    }, {
+      "answerText" : "Perpendicular",
+      "isCorrect" : true
+    }, {
+      "answerText" : "Intersect at one point",
+      "isCorrect" : false
+    } ],
+    "correct_answer" : "Perpendicular",
+    "difficulty" : "medium",
+    "id" : 1,
+    "incorrect_answers" : [ "Are parallel", "Intersect at two points", "Intersect at one point" ],
+    "question" : "The graph of the two linear equations ax + by = c and bx - ay = c, where a,b and c are all not equal to zero"
+  }, {
+    "All_answers" : [ "Square", "Triangle", "Rectangle", "Circle" ],
+    "answer_options" : [ {
+      "answerText" : "Square",
+      "isCorrect" : false
+    }, {
+      "answerText" : "Triangle",
+      "isCorrect" : false
+    }, {
+      "answerText" : "Rectangle",
+      "isCorrect" : false
+    }, {
+      "answerText" : "Circle",
+      "isCorrect" : true
+    } ],
+    "correct_answer" : "Circle",
+    "difficulty" : "hard",
+    "id" : 2,
+    "incorrect_answers" : [ "Square", "Triangle", "Rectangle" ],
+    "question" : "What does not have a side?"
+  }, {
+    "All_answers" : [ "22", "0", "8", "4" ],
+    "answer_options" : [ {
+      "answerText" : "22",
+      "isCorrect" : false
+    }, {
+      "answerText" : "0",
+      "isCorrect" : false
+    }, {
+      "answerText" : "8",
+      "isCorrect" : false
+    }, {
+      "answerText" : "4",
+      "isCorrect" : true
+    } ],
+    "correct_answer" : "4",
+    "difficulty" : "easy",
+    "id" : 3,
+    "incorrect_answers" : [ "22", "0", "8" ],
+    "question" : "What is the sum of 2 + 2?"
+  }, {
+    "All_answers" : [ "Four", "Eight", "Six", "Ten" ],
+    "answer_options" : [ {
+      "answerText" : "Four",
+      "isCorrect" : true
+    }, {
+      "answerText" : "Eight",
+      "isCorrect" : false
+    }, {
+      "answerText" : "Six",
+      "isCorrect" : false
+    }, {
+      "answerText" : "Ten",
+      "isCorrect" : false
+    } ],
+    "correct_answer" : "Four",
+    "difficulty" : "hard",
+    "id" : 4,
+    "incorrect_answers" : [ "Six", "Eight", "Ten" ],
+    "question" : "What is the square of 2?"
+  }, {
+    "All_answers" : [ "11", "10", "5", "8" ],
+    "answer_options" : [ {
+      "answerText" : "11",
+      "isCorrect" : false
+    }, {
+      "answerText" : "10",
+      "isCorrect" : true
+    }, {
+      "answerText" : "5",
+      "isCorrect" : false
+    }, {
+      "answerText" : "8",
+      "isCorrect" : false
+    } ],
+    "correct_answer" : "Ten",
+    "difficulty" : "easy",
+    "id" : 5,
+    "incorrect_answers" : [ "11", "5", "8" ],
+    "question" : "How many fingers do you have?"
+  } ]
+}

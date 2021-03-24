@@ -8,6 +8,7 @@ import MathsQuiz from '../screens/MathsQuiz/index';
 import AllQuizList from '../components/AllQuizList/index';
 import AboutScreen from '../screens/AboutScreen/index';
 import OptionalFooter from '../components/OptionalFooter/index';
+import MyHistoryScreen from '../screens/MyHistoryScreen/index';
 
 import MyTab from './MyTab';
 
@@ -20,6 +21,7 @@ function MyStack(){
             <Stack.Screen options={{headerShown: false}} name ='MyTab' component={MyTab}/>
             <Stack.Screen options={{headerShown: false}} name ='Maths' component={MathsQuiz}/>
             <Stack.Screen options={{headerShown: false}} name ='About' component={AboutScreen}/>
+            <Stack.Screen options={{headerShown: false}} name ='MyHistory' component={MyHistoryScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='AllQuiz' component={AllQuizList}/>
             <Stack.Screen options={{headerShown: false}} name ='Results' component={ResultScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='OptionalFooter' component={OptionalFooter}/>

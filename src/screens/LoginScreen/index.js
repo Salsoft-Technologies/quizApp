@@ -1,4 +1,3 @@
-
 import React, {useState, useContext} from 'react';
 import {
   View,
@@ -11,7 +10,6 @@ import {
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {AuthContext} from '../../navigation/AuthProvider';
 import styles from './styles';
-
 
 function LoginScreen({navigation}) {
   const [email, setEmail] = useState('');

@@ -73,6 +73,7 @@ export const AuthProvider = ({children}) => {
             await auth().createUserWithEmailAndPassword(
               email,
               password,
+              displayName,
               age,
               country,
             );
