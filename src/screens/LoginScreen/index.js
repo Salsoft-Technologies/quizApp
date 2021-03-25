@@ -6,6 +6,7 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  Platform
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {AuthContext} from '../../navigation/AuthProvider';
@@ -56,8 +57,10 @@ function LoginScreen({navigation}) {
           style={{paddingTop: 10}}>
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity
+        {
+          Platform.OS === 'android' ? (
+            <>
+            <TouchableOpacity
           style={styles.loginWithGoogleButton}
           onPress={() => googleLogin()}>
           <Text style={styles.loginWithGoogleButtonText}>
@@ -80,6 +83,10 @@ function LoginScreen({navigation}) {
             source={require('../../assets/images/quizIcons/fb.png')}
           />
         </TouchableOpacity>
+            </>
+          ) : null
+        }
+        
 
         <View style={styles.noAccountView}>
           <Text style={styles.noAccountText}>Don't have an account? </Text>

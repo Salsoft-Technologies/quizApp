@@ -15,7 +15,7 @@ export default StyleSheet.create({
   },
 
   allQuizIcons: {
-    height: 7.5 * vh,
+    height: 6.5 * vh,
     width: 12 * vw,
     alignSelf: 'center',
     marginTop: 2 * vh,

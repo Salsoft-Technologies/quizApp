@@ -6,12 +6,13 @@ export default StyleSheet.create({
   headerView: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
+    paddingRight: 1.5 * vw
     
   },
 
   imageSize: {
     height: 40 * vh,
-    width: 60 * vw,
+    width: 72 * vw,
     alignSelf: 'center',
   },
 
@@ -62,7 +63,7 @@ export default StyleSheet.create({
   },
 
   footerView: {
-      flexDirection: 'row', alignItems: 'center', top: 0.7 * vh, justifyContent: 'flex-end'
+      flexDirection: 'row', alignItems: 'center', top: 0.7 * vh, justifyContent: 'flex-end', paddingRight: 2 * vw
     },
 
     tourText: {

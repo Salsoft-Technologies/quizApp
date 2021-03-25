@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {Text, View, Image, FlatList, ScrollView} from 'react-native';
 import styles from './styles';
 import NotificationHeader from '../../components/NotificationHeader/index';
-import OptionalFooter from '../../components/OptionalFooter/index';
 import Loader from '../../components/AnimatedLoader/index';
 
 
@@ -50,7 +49,6 @@ function HistoryScreen({navigation}){
     return(
         <View style={styles.historyMainScreen}>
             <NotificationHeader title='History'/>
-            <OptionalFooter title = 'Show my History' destination={()=> navigation.navigate('MyHistory')}/>
             {
                 historyData != '' ? <ScrollView>{renderAllHistory()}</ScrollView> : <Loader/>
             }

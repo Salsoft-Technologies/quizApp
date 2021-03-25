@@ -11,7 +11,7 @@ function SettingsScreen({navigation}){
             <ScrollView>
             <TouchableOpacity onPress={()=> navigation.navigate('AllQuiz')} style={styles.touchableRow}>
                 <View style={styles.rowView}>
-                <Image source={require('../../assets/images/quizIcons/quizSettingIcon.png')}/>
+                <Image style={styles.rowIconSize3} source={require('../../assets/images/quizIcons/about.png')}/>
                 <Text style={styles.rowText}>TAKE QUIZ</Text>
                 </View>
                 <Image style={styles.rowIcon} source={require('../../assets/images/quizIcons/greater.png')}/>
@@ -19,7 +19,7 @@ function SettingsScreen({navigation}){
 
             <TouchableOpacity onPress={()=> navigation.navigate('Notification')} style={styles.touchableRow}>
                 <View style={styles.rowView}>
-                <Image style={styles.rowIconSize} source={require('../../assets/images/quizIcons/alertSetting.png')}/>
+                <Image style={styles.rowIconSize3} source={require('../../assets/images/quizIcons/about.png')}/>
                 <Text style={styles.rowText}>NOTIFICATIONS</Text>
                 </View>
                 <Image style={styles.rowIcon} source={require('../../assets/images/quizIcons/greater.png')}/>

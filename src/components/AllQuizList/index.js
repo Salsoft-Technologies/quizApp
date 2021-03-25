@@ -25,6 +25,8 @@ function AllQuizList({navigation, route}) {
       QuizSubject: 'Science',
       Difficulty: 'Easy',
       image: require('../../assets/images/quizIcons/science.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
 
     {
@@ -32,6 +34,8 @@ function AllQuizList({navigation, route}) {
       QuizSubject: 'Physics',
       Difficulty: 'Normal',
       image: require('../../assets/images/quizIcons/knowledge.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
 
     {
@@ -39,6 +43,8 @@ function AllQuizList({navigation, route}) {
       QuizSubject: 'Programming',
       Difficulty: 'Expert',
       image: require('../../assets/images/quizIcons/drama.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
   ]);
 
@@ -48,6 +54,8 @@ function AllQuizList({navigation, route}) {
       popularQuizName: 'Science',
       Difficulty: 'Hard',
       image: require('../../assets/images/quizIcons/ScienceQuiz.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
 
     {
@@ -55,6 +63,8 @@ function AllQuizList({navigation, route}) {
       popularQuizName: 'Astronomy',
       Difficulty: 'Hard',
       image: require('../../assets/images/quizIcons/astronomy.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
 
     {
@@ -62,6 +72,8 @@ function AllQuizList({navigation, route}) {
       popularQuizName: 'Programming',
       Difficulty: 'Hard',
       image: require('../../assets/images/quizIcons/programmer.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
 
     {
@@ -69,6 +81,8 @@ function AllQuizList({navigation, route}) {
       popularQuizName: 'Electronics',
       Difficulty: 'Hard',
       image: require('../../assets/images/quizIcons/electronics.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
 
     {
@@ -76,6 +90,8 @@ function AllQuizList({navigation, route}) {
       popularQuizName: 'Programming',
       Difficulty: 'Hard',
       image: require('../../assets/images/quizIcons/programmer.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
 
     {
@@ -83,6 +99,8 @@ function AllQuizList({navigation, route}) {
       popularQuizName: 'Electronics',
       Difficulty: 'Hard',
       image: require('../../assets/images/quizIcons/electronics.png'),
+      sendMe: ()=> navigation.navigate('Maths')
+
     },
   ]);
 
@@ -124,7 +142,7 @@ function AllQuizList({navigation, route}) {
   };
   const _renderPopularList = ({item}) => {
     return (
-      <TouchableOpacity style={styles.kidsQuizButton}>
+      <TouchableOpacity onPress={item.sendMe} style={styles.kidsQuizButton}>
         <Image style={styles.kidsButtonIcon} source={item.image} />
 
         <Text style={styles.kidsButtonSubjectText}>{item.popularQuizName}</Text>

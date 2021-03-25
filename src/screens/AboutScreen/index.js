@@ -1,5 +1,6 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useContext} from 'react';
+import { AuthContext } from '../../navigation/AuthProvider';
 
 import {
   Text,
@@ -12,6 +13,7 @@ import {
 import styles from './styles';
 
 function AboutScreen({navigation}) {
+  const {logout} = useContext(AuthContext);
   const [data, setData] = useState([
     {
       id: 1,
@@ -41,9 +43,9 @@ function AboutScreen({navigation}) {
   const renderAboutHeader = () => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate('Settings')}
+        onPress={()=> logout()}
         style={styles.headerView}>
-        <Image source={require('../../assets/images/navigation/setting.png')} />
+        <Image source={require('../../assets/images/quizIcons/logout.png')} />
       </TouchableOpacity>
     );
   };
@@ -105,7 +107,7 @@ function AboutScreen({navigation}) {
 
   const renderFooter = () => {
       return(
-          <TouchableOpacity onPress={()=> navigation.navigate('AllQuiz')} style={styles.footerView}>
+          <TouchableOpacity onPress={()=> navigation.navigate('Welcome')} style={styles.footerView}>
               <Image style={styles.arrowIcon} source={require('../../assets/images/quizIcons/rightArrow.png')}/>
 
               <Text style={styles.tourText}>

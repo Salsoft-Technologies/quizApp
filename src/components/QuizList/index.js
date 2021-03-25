@@ -8,7 +8,7 @@ function QuizList() {
   const [firstList, setFirstList] = useState([
     {
       id: 1,
-      quizName: 'Mathematics',
+      quizName: 'Maths',
       image: require('../../assets/images/quizIcons/maths.png'),
       to: ()=> navigation.navigate('Maths')
     },
@@ -17,30 +17,35 @@ function QuizList() {
       id: 2,
       quizName: 'Science',
       image: require('../../assets/images/quizIcons/science.png'),
+      to: ()=> navigation.navigate('Maths')
     },
 
     {
       id: 3,
       quizName: 'Drama',
       image: require('../../assets/images/quizIcons/drama.png'),
+      to: ()=> navigation.navigate('Maths')
     },
 
     {
       id: 4,
       quizName: 'Art & Craft',
       image: require('../../assets/images/quizIcons/art.png'),
+      to: ()=> navigation.navigate('Maths')
     },
 
     {
       id: 5,
       quizName: 'Knowledge',
       image: require('../../assets/images/quizIcons/knowledge.png'),
+      to: ()=> navigation.navigate('Maths')
     },
 
     {
       id: 6,
       quizName: 'Language',
       image: require('../../assets/images/quizIcons/language.png'),
+      to: ()=> navigation.navigate('Maths')
     },
 
   ]);

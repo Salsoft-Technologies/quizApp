@@ -14,10 +14,10 @@ export default StyleSheet.create({
   },
 
   historyCoinsImage: {
-    backgroundColor: '#ecf5fe',
-    borderRadius: 5 * vw,
-    height: 12 * vh,
-    width: 20 * vw,
+    backgroundColor: 'transparent',
+    borderRadius: 8 * vw,
+    height: 10 * vh,
+    width: 18 * vw,
   },
 
   historyCoinsView: {

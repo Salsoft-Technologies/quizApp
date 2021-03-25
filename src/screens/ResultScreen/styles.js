@@ -4,24 +4,25 @@ import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
     topHeaderView: {
-        alignItems: 'center',
+       
       },
     
       topHeaderText: {
         color: '#fff',
         fontSize: 3.7 * vh,
         fontWeight: 'bold',
-        paddingTop: 1.5 * vh
+        paddingTop: 1.5 * vh,
+        alignSelf: 'center'
       },
     
       topHeaderImage: {
         alignSelf: 'center',
-        paddingTop: 1.5 * vh,
+        paddingTop: 5.5 * vh,
       },
     
       topHeaderImageSize: {
-        height: 30 * vh,
-        width: 50 * vw,
+        height: 25 * vh,
+        width: 55 * vw,
       },
     
       congratulationsMessageText: {
@@ -77,15 +78,21 @@ export default StyleSheet.create({
       },
     
       footerView: {
+        // flexDirection: 'row',
+        // justifyContent: 'space-evenly',
+        // paddingTop: 5.1 * vh,
+        // bottom: 3.8 * vh,
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        paddingTop: 5.1 * vh,
+        position: 'absolute',
+        bottom: 3.8 * vh,
+        alignSelf: 'center',
       },
     
       shareButton: {
         flexDirection: 'row',
         backgroundColor: '#ffffff',
         paddingHorizontal: 7.5 * vw,
+        marginHorizontal: 2 * vw,
         paddingVertical: 2.3 * vh,
         borderRadius: 3.4 * vw,
         alignItems: 'center',
@@ -106,6 +113,7 @@ export default StyleSheet.create({
         paddingHorizontal: 7.5 * vw,
         paddingVertical: 2.3 * vh,
         borderRadius:  3.4 * vw,
+        marginHorizontal: 2 * vw
       },
     
       newQuizText: {

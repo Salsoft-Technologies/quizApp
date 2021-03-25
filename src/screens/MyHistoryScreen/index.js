@@ -23,13 +23,11 @@ function MyHistoryScreen({navigation}){
             const newDetails = datasnap.val()
             const newData = Object.values(newDetails);
             const sortedData = newData.sort((a,b) => new Date(...b.playedDate.split('-').reverse()) - new Date(...a.playedDate.split('-').reverse()))
-            const theSortedData = sortedData.sort((a, b) => b.userScore - a.userScore);
-            const newArray = theSortedData.filter(obj => obj.userId === retrievedUser);
+            // const theSortedData = sortedData.sort((a, b) => b.userScore - a.userScore);
+            const newArray = sortedData.filter(obj => obj.userId === retrievedUser);
             setDataHistory(newArray);
         })
     }
-
-   
 
    useEffect(() => {
     gettingData()
@@ -54,11 +52,10 @@ function MyHistoryScreen({navigation}){
     }
     return(
         <View style={styles.historyMainScreen}>
-            <NotificationHeader title='My History'/>
+            <NotificationHeader title='Notifications'/>
             {
                 historyData != '' ? <ScrollView>{renderAllHistory()}</ScrollView> : <Loader/>
             }
-            
         </View>
     )
 }

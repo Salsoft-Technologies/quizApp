@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
 
   navIconSize: {
-    height: 3.8 * vh,
+    height: 3 * vh,
     width: 2.8 * vh,
   },
 

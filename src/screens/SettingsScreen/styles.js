@@ -18,23 +18,23 @@ export default StyleSheet.create({
   rowText: {
     paddingLeft: 2.5 * vw,
     color: '#5d6175',
-    fontSize: 2.2 * vh,
+    fontSize: 2 * vh,
   },
 
   rowIcon: {
-    height: 2.5 * vh,
-    width: 4.5 * vw,
+    height: 1.5 * vh,
+    width: 3.5 * vw,
     alignSelf: 'center',
   },
 
   rowIconSize: {
-    height: 4.5 * vh,
-    width: 6 * vw,
+    height: 3.5 * vh,
+    width: 5 * vw,
   },
 
   rowIconSize3: {
-    height: 5.5 * vh,
-    width: 8 * vw,
+    height: 4.5 * vh,
+    width: 7 * vw,
   },
 
   mainSettingsScreen: {
