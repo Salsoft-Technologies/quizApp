@@ -12,7 +12,7 @@ export default StyleSheet.create({
 
   imageSize: {
     height: 40 * vh,
-    width: 72 * vw,
+    width: 60 * vw,
     alignSelf: 'center',
   },
 
