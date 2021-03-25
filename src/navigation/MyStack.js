@@ -17,9 +17,9 @@ function MyStack(){
     const Stack = createStackNavigator();
     return(
         <Stack.Navigator>
-            <Stack.Screen options={{headerShown: false}} name ='About' component={AboutScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='Welcome' component={WelcomeScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='MyTab' component={MyTab}/>
+            <Stack.Screen options={{headerShown: false}} name ='About' component={AboutScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='Maths' component={MathsQuiz}/>
             <Stack.Screen options={{headerShown: false}} name ='MyHistory' component={MyHistoryScreen}/>
             <Stack.Screen options={{headerShown: false}} name ='AllQuiz' component={AllQuizList}/>
