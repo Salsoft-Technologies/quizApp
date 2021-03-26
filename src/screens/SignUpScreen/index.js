@@ -29,6 +29,14 @@ function SignUpScreen({navigation}) {
     );
   };
 
+  const checkSignUpandler = (email, password, age, country) => {
+    if (email === '' || password === '') {
+      alert('Something is wrong');
+    } else {
+      register(email, password, age, country);
+    }
+  };
+
   const renderSignUpTextBoxes = () => {
     return (
       <KeyboardAwareScrollView>
@@ -79,7 +87,7 @@ function SignUpScreen({navigation}) {
 
         {/* <TouchableOpacity onPress={signUp} style={{paddingTop: 10}}> */}
         <TouchableOpacity
-          onPress={() => register(email, password, age, country)}
+          onPress={() => checkSignUpandler(email, password, age, country)}
           style={{paddingTop: 10}}>
           <Text style={styles.loginButtonText}>Signup</Text>
         </TouchableOpacity>

@@ -57,12 +57,13 @@ export const AuthProvider = ({children}) => {
               throw 'Something went wrong obtaining access token';
             }
 
-             // Create a Firebase credential with the AccessToken
-            const facebookCredential = auth.FacebookAuthProvider.credential(data.accessToken);
+            // Create a Firebase credential with the AccessToken
+            const facebookCredential = auth.FacebookAuthProvider.credential(
+              data.accessToken,
+            );
 
             // Sign-in the user with the credential
             await auth().signInWithCredential(facebookCredential);
-
           } catch (e) {
             console.log(e);
           }
@@ -73,7 +74,6 @@ export const AuthProvider = ({children}) => {
             await auth().createUserWithEmailAndPassword(
               email,
               password,
-              displayName,
               age,
               country,
             );

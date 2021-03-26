@@ -1,13 +1,18 @@
 import React, {useContext} from 'react';
-import {Text, View, Image, StatusBar, TouchableOpacity, ScrollView} from 'react-native';
+import {
+  Text,
+  View,
+  Image,
+  StatusBar,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import Header from '../../components/Header/index';
 import QuizList from '../../components/QuizList/index';
 import styles from './styles';
 
-
-
 function HomeScreen({navigation, route}) {
-  const { name } = route.params;
+  const {name} = route.params;
 
   const renderCard = () => {
     return (
@@ -15,7 +20,6 @@ function HomeScreen({navigation, route}) {
         <Image
           style={styles.cardImage}
           source={require('../../assets/images/mainImages/CardImage2.jpg')}
-
         />
 
         <View style={styles.cardMainTextView}>
@@ -39,21 +43,22 @@ function HomeScreen({navigation, route}) {
       <View style={styles.mainViewTopCategoriesText}>
         <Text style={styles.topCategoriesTextStyle}>Top Quiz Categories</Text>
 
-        <TouchableOpacity onPress={()=> navigation.navigate('AllQuiz')} style={styles.topCategoriesButton}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('AllQuiz')}
+          style={styles.topCategoriesButton}>
           <Text style={styles.topCategoriesButtonText}>View All</Text>
         </TouchableOpacity>
       </View>
     );
   };
 
-
   return (
     <View style={styles.mainScreenView}>
-    <StatusBar backgroundColor='#2a2b31'/>
-    <Header title= {name}/>
+      <StatusBar backgroundColor="#2a2b31" />
+      <Header title={name} />
       {renderCard()}
       {renderTopQuizCategories()}
-      <QuizList/>
+      <QuizList />
     </View>
   );
 }

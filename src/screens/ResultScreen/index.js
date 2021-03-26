@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Text, View, StatusBar, Image, Share} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import styles from './styles';
@@ -33,6 +33,7 @@ function ResultScreen({route, navigation}) {
       playedTime: currentTime,
     });
   });
+
   const renderQuizResultText = () => {
     return (
       <View style={styles.topHeaderView}>
@@ -40,11 +41,13 @@ function ResultScreen({route, navigation}) {
         <View style={styles.topHeaderImage}>
           {paramKey >= 3 ? (
             <Image
+              resizeMode="contain"
               style={styles.topHeaderImageSize}
               source={require('../../assets/images/mainImages/victoryCup.png')}
             />
           ) : (
             <Image
+              resizeMode="contain"
               style={styles.topHeaderImageSize}
               source={require('../../assets/images/mainImages/lost.png')}
             />
@@ -57,7 +60,7 @@ function ResultScreen({route, navigation}) {
   const onShare = async () => {
     const passedMessage = `You have cleared the quiz with score of ${paramKey} `;
     const failedMessage = `You have failed the quiz with score of ${paramKey}`;
-    const theMessage = paramKey >= 3 ? passedMessage : failedMessage 
+    const theMessage = paramKey >= 3 ? passedMessage : failedMessage;
     try {
       const result = await Share.share({
         message: theMessage,
@@ -102,7 +105,7 @@ function ResultScreen({route, navigation}) {
   const renderScore = () => {
     return (
       <View>
-        <Text style={styles.yourScoreText}>Y O U R  S C O R E</Text>
+        <Text style={styles.yourScoreText}>Y O U R S C O R E</Text>
         <Text style={styles.totalAnsweredQuestions}>
           {' '}
           {paramKey}{' '}
@@ -130,10 +133,13 @@ function ResultScreen({route, navigation}) {
         : 0;
     return (
       <View>
-        <Text style={styles.yourScoreText}>E A R N E D  C O I N S</Text>
+        <Text style={styles.yourScoreText}>E A R N E D C O I N S</Text>
 
         <View style={styles.coinsView}>
-          <Image source={require('../../assets/images/quizIcons/coins.png')} />
+          <Image
+            resizeMode="contain"
+            source={require('../../assets/images/quizIcons/coins.png')}
+          />
 
           <Text style={styles.coinsText}>{scoredCoins}</Text>
         </View>
@@ -145,10 +151,14 @@ function ResultScreen({route, navigation}) {
     return (
       <View style={styles.footerView}>
         <TouchableOpacity onPress={() => onShare()} style={styles.shareButton}>
-          <Image
-            style={styles.shareButtonIcon}
-            source={require('../../assets/images/quizIcons/share.png')}
-          />
+          <View>
+            <Image
+              resizeMode="contain"
+              style={styles.shareButtonIcon}
+              source={require('../../assets/images/quizIcons/share.png')}
+            />
+          </View>
+
           <Text style={styles.shareButtonText}>Share Results</Text>
         </TouchableOpacity>
 

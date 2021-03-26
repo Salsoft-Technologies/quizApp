@@ -15,11 +15,11 @@ export default StyleSheet.create({
   headerRowView: {
     flexDirection: 'row',
     marginLeft: 5 * vw,
-    paddingTop: 2 * vh,
+    paddingTop: 5 * vh,
   },
 
   profilePicture: {
-    height: 7.5 * vh,
+    height: 6 * vh,
     width: 13 * vw,
     borderRadius: 7.5 * vw,
   },
@@ -39,7 +39,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 6 * vw,
-    marginTop: 2 * vh,
+    marginTop: 5 * vh,
   },
 
   logoutButtonText: {

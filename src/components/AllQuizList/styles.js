@@ -17,6 +17,7 @@ export default StyleSheet.create({
     color: '#646364',
     alignSelf: 'center',
     fontSize: 2.3 * vh,
+    paddingTop: 3 * vh,
   },
 
   headerSecondHeading: {
@@ -36,7 +37,7 @@ export default StyleSheet.create({
   },
 
   listImage: {
-    height: 8 * vh,
+    height: 7 * vh,
     width: 14 * vw,
   },
 
@@ -58,7 +59,7 @@ export default StyleSheet.create({
   },
 
   kidsQuizButton: {
-    marginLeft: 18 * vw,
+    marginLeft: 20 * vw,
     alignItems: 'center',
     paddingTop: 1.5 * vh,
   },
@@ -81,6 +82,32 @@ export default StyleSheet.create({
     backgroundColor: '#141733',
   },
 
-  footerStyle:{
-    flexDirection: 'row', alignItems: 'center', top: 0.7 * vh, justifyContent: 'flex-end', padding: 3.3 * vw}
+  footerStyle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 5.3 * vw,
+    bottom: 2 * vh,
+  },
+
+  mainFooterView: {flexDirection: 'row', justifyContent: 'space-between'},
+
+  goBackButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 5.3 * vw,
+    bottom: 2 * vh,
+  },
+
+  goBackText: {
+    color: '#abb9f9',
+    fontWeight: 'bold',
+    paddingLeft: 1.5 * vw,
+  },
+
+  backIconStyle: {
+    height: 3.4 * vh,
+    width: 7.4 * vw,
+  },
 });

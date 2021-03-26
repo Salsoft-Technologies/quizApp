@@ -15,9 +15,8 @@ export default StyleSheet.create({
 
   historyCoinsImage: {
     backgroundColor: 'transparent',
-    borderRadius: 8 * vw,
-    height: 10 * vh,
-    width: 18 * vw,
+    height: 8 * vh,
+    width: 16 * vw,
   },
 
   historyCoinsView: {

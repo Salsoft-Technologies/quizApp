@@ -31,6 +31,7 @@ export default StyleSheet.create({
   textInputBox: {
     borderBottomWidth: 0.3 * vw,
     borderColor: 'white',
+    padding: 3 * vw,
   },
 
   quizLogo: {

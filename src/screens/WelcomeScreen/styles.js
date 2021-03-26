@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, ViewComponent} from 'react-native';
 import vw from '../../utils/units/vw';
 import vh from '../../utils/units/vh';
 
@@ -6,6 +6,7 @@ export default StyleSheet.create({
   textInputBox: {
     borderBottomWidth: 0.2 * vw,
     borderColor: 'white',
+    padding: 3 * vw,
   },
 
   buttonText: {
@@ -19,7 +20,6 @@ export default StyleSheet.create({
     fontSize: 2.3 * vh,
     color: '#b50f45',
     paddingTop: 3 * vh,
-    alignSelf: 'center',
     letterSpacing: 0.5 * vw,
   },
 

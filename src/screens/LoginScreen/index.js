@@ -6,7 +6,7 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
-  Platform
+  Platform,
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {AuthContext} from '../../navigation/AuthProvider';
@@ -15,7 +15,6 @@ import styles from './styles';
 function LoginScreen({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
   const {login, googleLogin, fbLogin} = useContext(AuthContext);
 
   const renderLogo = () => {
@@ -26,6 +25,14 @@ function LoginScreen({navigation}) {
         source={require('../../assets/images/quizIcons/logo.png')}
       />
     );
+  };
+
+  const checkLoginHandler = (email, password) => {
+    if ((email === '', password === '')) {
+      alert('Something is wrong');
+    } else {
+      login(email, password);
+    }
   };
 
   const renderLoginTextBoxes = () => {
@@ -53,20 +60,26 @@ function LoginScreen({navigation}) {
         />
 
         <TouchableOpacity
-          onPress={() => login(email, password)}
+          onPress={() => checkLoginHandler(email, password)}
           style={{paddingTop: 10}}>
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
-        {
+        {/* {
           Platform.OS === 'android' ? (
             <>
-            <TouchableOpacity
+         
+            </>
+          ) : null
+        } */}
+
+        <TouchableOpacity
           style={styles.loginWithGoogleButton}
           onPress={() => googleLogin()}>
           <Text style={styles.loginWithGoogleButtonText}>
             Login with Google
           </Text>
           <Image
+            resizeMode="contain"
             style={styles.loginWithGoogleButtonIcon}
             source={require('../../assets/images/quizIcons/google.png')}
           />
@@ -79,14 +92,11 @@ function LoginScreen({navigation}) {
             Login with Facebook
           </Text>
           <Image
+            resizeMode="contain"
             style={styles.loginWithFacebookButtonIcon}
             source={require('../../assets/images/quizIcons/fb.png')}
           />
         </TouchableOpacity>
-            </>
-          ) : null
-        }
-        
 
         <View style={styles.noAccountView}>
           <Text style={styles.noAccountText}>Don't have an account? </Text>

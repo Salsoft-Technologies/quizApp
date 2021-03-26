@@ -10,7 +10,7 @@ import {
 import styles from './styles';
 function WelcomeScreen({navigation}) {
   const [name, setName] = useState('');
-  
+
   const renderLogo = () => {
     return (
       <Image
@@ -36,7 +36,9 @@ function WelcomeScreen({navigation}) {
 
         {name === '' ? (
           <TouchableOpacity>
-            <Text style={styles.buttonTextEmpty}>E N T E R   Y O U R   N I C K </Text>
+            <Text style={styles.buttonTextEmpty}>
+              E N T E R Y O U R N I C K{' '}
+            </Text>
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
@@ -46,7 +48,7 @@ function WelcomeScreen({navigation}) {
                 params: {name},
               })
             }>
-            <Text style={styles.buttonText}>E N T E R   Y O U R   N I C K</Text>
+            <Text style={styles.buttonText}>E N T E R Y O U R N I C K</Text>
           </TouchableOpacity>
         )}
       </View>

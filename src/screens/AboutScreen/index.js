@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState, useContext} from 'react';
-import { AuthContext } from '../../navigation/AuthProvider';
+import {AuthContext} from '../../navigation/AuthProvider';
 
 import {
   Text,
@@ -11,6 +11,7 @@ import {
   StatusBar,
 } from 'react-native';
 import styles from './styles';
+import OptionalFooter from '../../components/OptionalFooter/index';
 
 function AboutScreen({navigation}) {
   const {logout} = useContext(AuthContext);
@@ -42,9 +43,7 @@ function AboutScreen({navigation}) {
 
   const renderAboutHeader = () => {
     return (
-      <TouchableOpacity
-        onPress={()=> logout()}
-        style={styles.headerView}>
+      <TouchableOpacity onPress={() => logout()} style={styles.headerView}>
         <Image source={require('../../assets/images/quizIcons/logout.png')} />
       </TouchableOpacity>
     );
@@ -54,6 +53,7 @@ function AboutScreen({navigation}) {
     return (
       <View>
         <Image
+          resizeMode="contain"
           style={styles.imageSize}
           source={require('../../assets/images/mainImages/study.png')}
         />
@@ -106,16 +106,28 @@ function AboutScreen({navigation}) {
   };
 
   const renderFooter = () => {
-      return(
-          <TouchableOpacity onPress={()=> navigation.navigate('Welcome')} style={styles.footerView}>
-              <Image style={styles.arrowIcon} source={require('../../assets/images/quizIcons/rightArrow.png')}/>
+    return (
+      <View style={styles.mainFooterView}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.goBackButton}>
+          <Image
+            resizeMode="contain"
+            style={styles.backIconStyle}
+            source={require('../../assets/images/quizIcons/leftArrow.png')}
+          />
 
-              <Text style={styles.tourText}>
-              Take a Tour
-              </Text>
-          </TouchableOpacity>
-      )
-  }
+          <Text style={styles.goBackText}>Go Back</Text>
+        </TouchableOpacity>
+
+        <OptionalFooter
+          title="Take a Tour"
+          customStyle={styles.footerStyle}
+          destination={() => navigation.navigate('AllQuiz')}
+        />
+      </View>
+    );
+  };
 
   return (
     <View style={styles.mainSettingScreen}>

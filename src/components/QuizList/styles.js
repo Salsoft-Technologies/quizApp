@@ -2,7 +2,6 @@ import {StyleSheet} from 'react-native';
 import vw from '../../utils/units/vw';
 import vh from '../../utils/units/vh';
 
-
 export default StyleSheet.create({
   categoriesMainView: {
     height: 15 * vh,
@@ -15,7 +14,7 @@ export default StyleSheet.create({
   },
 
   allQuizIcons: {
-    height: 6.5 * vh,
+    height: 6 * vh,
     width: 12 * vw,
     alignSelf: 'center',
     marginTop: 2 * vh,

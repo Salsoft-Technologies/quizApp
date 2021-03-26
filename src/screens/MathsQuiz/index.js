@@ -1,4 +1,4 @@
-import { LogBox } from 'react-native';
+import {LogBox} from 'react-native';
 
 LogBox.ignoreLogs(['Setting a timer']);
 import React, {useState, useEffect} from 'react';
@@ -21,11 +21,11 @@ function MathsQuiz({navigation}) {
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [checked, setChecked] = useState(false);
-  
+
   const [incorrectChecked, setIncorrectChecked] = useState(false);
   const [correctDisabled, setCorrectDisabled] = useState(false);
   const [incorrectDisabled, setIncorrectDisabled] = useState(false);
-  const [fetchedQuestions, setFetechedQuestions] = useState([])
+  const [fetchedQuestions, setFetechedQuestions] = useState([]);
 
   const [openAnswers, setOpenAnswers] = useState(false);
   const [answer1, setAnswer] = useState(false);
@@ -36,13 +36,13 @@ function MathsQuiz({navigation}) {
 
   const theLength = fetchedQuestions.length;
 
-  useEffect(()=>{
-    const allQuestions = firebaseobj.database().ref("Questions");
-    allQuestions.on("value", datasnap => {
+  useEffect(() => {
+    const allQuestions = firebaseobj.database().ref('Questions');
+    allQuestions.on('value', (datasnap) => {
       const theQuestions = datasnap.val();
       setFetechedQuestions(theQuestions);
-    })
-  }, [])
+    });
+  }, []);
 
   const renderProgress = () => {
     return (
@@ -87,7 +87,6 @@ function MathsQuiz({navigation}) {
                   ? styles.correctAnswerColor
                   : styles.incorrectAnswerColor
               }></View>
-
           </View>
         )}
       </View>
@@ -150,7 +149,7 @@ function MathsQuiz({navigation}) {
     } else {
       navigation.navigate('Results', {
         paramKey: score,
-        paramKey2: theLength
+        paramKey2: theLength,
       });
       setCurrentQuestion(1);
       setIndex(0);
@@ -204,11 +203,13 @@ function MathsQuiz({navigation}) {
             </Text>
             {incorrectChecked === true ? (
               <Image
+                resizeMode="contain"
                 style={{height: 20, width: 20}}
                 source={require('../../assets/images/quizIcons/wrong.png')}
               />
             ) : (
               <Image
+                resizeMode="contain"
                 source={require('../../assets/images/quizIcons/circle.png')}
               />
             )}
@@ -244,7 +245,9 @@ function MathsQuiz({navigation}) {
               source={require('../../assets/images/quizIcons/correct2.png')}
             />
           ) : (
-            <Image source={require('../../assets/images/quizIcons/circle.png')} />
+            <Image
+              source={require('../../assets/images/quizIcons/circle.png')}
+            />
           )}
         </View>
       </TouchableOpacity>
@@ -282,6 +285,7 @@ function MathsQuiz({navigation}) {
           }
           style={styles.quitButton}>
           <Image
+            resizeMode="contain"
             style={styles.quitButtonIcon}
             source={require('../../assets/images/quizIcons/quit.png')}
           />
@@ -297,18 +301,19 @@ function MathsQuiz({navigation}) {
 
   return (
     <View style={styles.mainMathsQuiz}>
-      {
-        fetchedQuestions[index] ? <View>
-        <StatusBar backgroundColor="#12172e" />
-      {renderQuizHeading()}
-      {renderQuestionNo()}
-      {renderProgress()}
-      {renderQuestionDescription()}
-      {renderAllAnswers()}
-          
-        </View> : <Loader/>
-      }
-     
+      {fetchedQuestions[index] ? (
+        <View>
+          <StatusBar backgroundColor="#12172e" />
+          {renderQuizHeading()}
+          {renderQuestionNo()}
+          {renderProgress()}
+          {renderQuestionDescription()}
+          {renderAllAnswers()}
+        </View>
+      ) : (
+        <Loader />
+      )}
+
       {renderFooter()}
     </View>
   );

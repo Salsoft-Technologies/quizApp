@@ -3,7 +3,7 @@ import vw from '../../utils/units/vw';
 import vh from '../../utils/units/vh';
 
 export default StyleSheet.create({
-   loginButtonText: {
+  loginButtonText: {
     fontSize: 2.3 * vh,
     color: '#01c293',
     paddingTop: 3 * vh,
@@ -20,7 +20,6 @@ export default StyleSheet.create({
   noAccountText: {
     color: 'white',
     letterSpacing: 0.5 * vw,
-
   },
 
   createHereText: {
@@ -43,9 +42,8 @@ export default StyleSheet.create({
   },
 
   loginWithGoogleButtonIcon: {
-    height: 4.5 * vh,
+    height: 3.5 * vh,
     width: 6.5 * vw,
-
   },
 
   loginWithFacebookButton: {
@@ -63,13 +61,14 @@ export default StyleSheet.create({
   },
 
   loginWithFacebookButtonIcon: {
-    height: 4.5 * vh,
+    height: 3.5 * vh,
     width: 6.5 * vw,
   },
-  
+
   textInputBox: {
     borderBottomWidth: 1,
     borderColor: 'white',
+    padding: 3 * vw,
   },
 
   buttonText: {
@@ -99,4 +98,4 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-})
+});
