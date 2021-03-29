@@ -26,7 +26,7 @@ export default StyleSheet.create({
 
   headerTextView: {
     alignSelf: 'center',
-    marginLeft: 3 * vw,
+    marginLeft: 1 * vw,
   },
 
   headerTextStyle: {

@@ -101,7 +101,7 @@ function MathsQuiz({navigation}) {
     return (
       <Text style={styles.questionNo}>
         Question <Text style={styles.questionNoSize}>0{currentQuestion}</Text>
-        <Text style={styles.totalQuestionsNo}>/05</Text>
+        <Text style={styles.totalQuestionsNo}>/0{fetchedQuestions.length}</Text>
       </Text>
     );
   };
