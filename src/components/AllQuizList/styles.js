@@ -87,7 +87,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5.3 * vw,
-    bottom: 2 * vh,
+    bottom: 0.5 * vh,
   },
 
   mainFooterView: {flexDirection: 'row', justifyContent: 'space-between'},
@@ -97,7 +97,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5.3 * vw,
-    bottom: 2 * vh,
+    bottom: 0.5 * vh,
   },
 
   goBackText: {

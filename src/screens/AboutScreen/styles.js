@@ -88,7 +88,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5.3 * vw,
-    bottom: 2 * vh,
   },
 
   backIconStyle: {
@@ -107,6 +106,5 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5.3 * vw,
-    bottom: 2 * vh,
   },
 });
