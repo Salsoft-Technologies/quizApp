@@ -37,7 +37,7 @@ function WelcomeScreen({navigation}) {
         {name === '' ? (
           <TouchableOpacity>
             <Text style={styles.buttonTextEmpty}>
-              E N T E R Y O U R N I C K{' '}
+              E N T E R  Y O U R  N I C K
             </Text>
           </TouchableOpacity>
         ) : (
@@ -48,7 +48,7 @@ function WelcomeScreen({navigation}) {
                 params: {name},
               })
             }>
-            <Text style={styles.buttonText}>E N T E R Y O U R N I C K</Text>
+            <Text style={styles.buttonText}>E N T E R  Y O U R  N I C K</Text>
           </TouchableOpacity>
         )}
       </View>

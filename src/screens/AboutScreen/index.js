@@ -44,7 +44,7 @@ function AboutScreen({navigation}) {
   const renderAboutHeader = () => {
     return (
       <TouchableOpacity onPress={() => logout()} style={styles.headerView}>
-        <Image source={require('../../assets/images/quizIcons/logout.png')} />
+        <Image resizeMode='contain' source={require('../../assets/images/quizIcons/logout.png')} />
       </TouchableOpacity>
     );
   };
