@@ -20,7 +20,7 @@ function SettingsScreen({navigation}){
             <TouchableOpacity onPress={()=> navigation.navigate('Notification')} style={styles.touchableRow}>
                 <View style={styles.rowView}>
                 <Image style={styles.rowIconSize3} source={require('../../assets/images/quizIcons/about.png')}/>
-                <Text style={styles.rowText}>NOTIFICATIONS</Text>
+                <Text style={styles.rowText}>MY HISTORY</Text>
                 </View>
                 <Image style={styles.rowIcon} source={require('../../assets/images/quizIcons/greater.png')}/>
             </TouchableOpacity>

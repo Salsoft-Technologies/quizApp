@@ -15,8 +15,10 @@ export default StyleSheet.create({
 
   historyCoinsImage: {
     backgroundColor: 'transparent',
-    height: 8 * vh,
-    width: 16 * vw,
+    height: 10 * vh,
+    width: 18 * vw,
+    alignSelf: 'center',
+    justifyContent: 'center'
   },
 
   historyCoinsView: {
@@ -27,6 +29,7 @@ export default StyleSheet.create({
     color: 'white',
     // fontSize: 2.5 * vh,
     fontWeight: 'bold',
+    width: 35 * vw
   },
 
   historyTotalCoins: {

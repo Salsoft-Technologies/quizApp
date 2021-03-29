@@ -26,6 +26,7 @@ function MathsQuiz({navigation}) {
   const [correctDisabled, setCorrectDisabled] = useState(false);
   const [incorrectDisabled, setIncorrectDisabled] = useState(false);
   const [fetchedQuestions, setFetechedQuestions] = useState([]);
+  const [randomValue, setRandomValue] = useState(4);
 
   const [openAnswers, setOpenAnswers] = useState(false);
   const [answer1, setAnswer] = useState(false);
@@ -138,6 +139,7 @@ function MathsQuiz({navigation}) {
   };
 
   const nextQuestion = () => {
+    setRandomValue(Math.floor(Math.random() * Math.floor(10)) + 1)
     setIncorrectDisabled(false);
     setCorrectDisabled(false);
     setChecked(false);
@@ -153,10 +155,6 @@ function MathsQuiz({navigation}) {
       });
       setCurrentQuestion(1);
       setIndex(0);
-      setChecked(false);
-      setIncorrectChecked(false);
-      setCorrectDisabled(false);
-      setIncorrectDisabled(false);
       setScore(0);
       setAnswer(false);
       setAnswer2(false);
@@ -255,10 +253,10 @@ function MathsQuiz({navigation}) {
   };
 
   const renderAllAnswers = () => {
-    const correctRandomNumber = Math.floor(Math.random() * Math.floor(3)) + 1;
+    const correctRandomNumber = randomValue;
     return (
       <View style={styles.allAnswers}>
-        {correctRandomNumber < 3 ? (
+        {correctRandomNumber < 5 ? (
           <View>
             {renderIncorrectAnswer()}
             {renderCorrectAnswer()}

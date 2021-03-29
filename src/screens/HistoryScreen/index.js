@@ -35,7 +35,7 @@ function HistoryScreen({navigation}){
             <>
                 {historyData.map((data, index) => (
                     <View key={index} style={styles.historyMainView}>
-                    <Image style={styles.historyCoinsImage} source={require('../../assets/images/quizIcons/historyCoins.png')}/>
+                    <Image style={styles.historyCoinsImage} source={require('../../assets/images/quizIcons/victoryCoins.png')}/>
                     <View style={styles.historyCoinsView}>
                     <Text style={styles.historyTotalCoinsText}>{data.userEmail}</Text>
                     <Text style={styles.historyTotalCoins}><Text style={styles.historyScoredCoins}>{data.userScore}</Text> out of 5</Text>
@@ -48,7 +48,7 @@ function HistoryScreen({navigation}){
     }
     return(
         <View style={styles.historyMainScreen}>
-            <NotificationHeader title='History'/>
+            <NotificationHeader title='All Users History'/>
             {
                 historyData != '' ? <ScrollView>{renderAllHistory()}</ScrollView> : <Loader/>
             }
