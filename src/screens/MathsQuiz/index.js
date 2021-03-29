@@ -26,7 +26,9 @@ function MathsQuiz({navigation}) {
   const [correctDisabled, setCorrectDisabled] = useState(false);
   const [incorrectDisabled, setIncorrectDisabled] = useState(false);
   const [fetchedQuestions, setFetechedQuestions] = useState([]);
+
   const [randomValue, setRandomValue] = useState(4);
+  const [incorrectRandomValue, setIncorrectRandomValue] = useState(0);
 
   const [openAnswers, setOpenAnswers] = useState(false);
   const [answer1, setAnswer] = useState(false);
@@ -177,7 +179,7 @@ function MathsQuiz({navigation}) {
 
   const renderIncorrectAnswer = () => {
     const newArray = fetchedQuestions[index].incorrect_answers;
-    newLevel(newArray);
+    // newLevel(newArray);
     return newArray.map((item, i) => {
       return (
         <TouchableOpacity
