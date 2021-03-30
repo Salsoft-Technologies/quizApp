@@ -5,7 +5,7 @@ import vh from '../../utils/units/vh';
 export default StyleSheet.create({
   touchableRow: {
     flexDirection: 'row',
-    padding: 2.5 * vw ,
+    padding: 2.5 * vw,
     justifyContent: 'space-between',
     marginHorizontal: 1.5 * vw,
   },
@@ -38,7 +38,7 @@ export default StyleSheet.create({
   },
 
   mainSettingsScreen: {
-    padding: 4 * vw,
+    padding: 3 * vw,
     flex: 1,
     backgroundColor: '#12172e',
   },

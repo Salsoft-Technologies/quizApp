@@ -21,13 +21,13 @@ function SignUpScreen({navigation}) {
 
   const renderLogo = () => {
     return (
-      <>
+      <View>
         <Image
-          resizeMode="center"
+          resizeMode="contain"
           style={styles.quizLogo}
           source={require('../../assets/images/quizIcons/logo.png')}
         />
-      </>
+      </View>
     );
   };
 

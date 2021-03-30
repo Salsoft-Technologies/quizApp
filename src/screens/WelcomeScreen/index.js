@@ -14,11 +14,13 @@ function WelcomeScreen({navigation}) {
 
   const renderLogo = () => {
     return (
-      <Image
-        resizeMode="center"
-        style={styles.quizLogo}
-        source={require('../../assets/images/quizIcons/logo.png')}
-      />
+      <View>
+        <Image
+          resizeMode="contain"
+          style={styles.quizLogo}
+          source={require('../../assets/images/quizIcons/logo.png')}
+        />
+      </View>
     );
   };
 
