@@ -21,17 +21,19 @@ function SignUpScreen({navigation}) {
 
   const renderLogo = () => {
     return (
-      <Image
-        resizeMode="center"
-        style={styles.quizLogo}
-        source={require('../../assets/images/quizIcons/logo.png')}
-      />
+      <>
+        <Image
+          resizeMode="center"
+          style={styles.quizLogo}
+          source={require('../../assets/images/quizIcons/logo.png')}
+        />
+      </>
     );
   };
 
   const checkSignUpandler = (email, password, age, country) => {
-    if (email === '' || password === '') {
-      alert('Something is wrong');
+    if ((email === '', password === '', age === '', country === '')) {
+      alert('Some fields are missing');
     } else {
       register(email, password, age, country);
     }
@@ -39,7 +41,9 @@ function SignUpScreen({navigation}) {
 
   const renderSignUpTextBoxes = () => {
     return (
-      <KeyboardAwareScrollView>
+      <KeyboardAwareScrollView
+        bounces={false}
+        showsVerticalScrollIndicator={false}>
         <TextInput
           style={styles.textInputBox}
           onChangeText={(text) => setEmail(text)}

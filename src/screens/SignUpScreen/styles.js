@@ -37,6 +37,7 @@ export default StyleSheet.create({
   quizLogo: {
     height: 36.5 * vh,
     width: 61 * vw,
+    paddingTop: 2 * vh,
   },
 
   mainWelcomeScreen: {

@@ -7,6 +7,7 @@ import {
   Image,
   StatusBar,
 } from 'react-native';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
 function WelcomeScreen({navigation}) {
   const [name, setName] = useState('');
@@ -37,7 +38,7 @@ function WelcomeScreen({navigation}) {
         {name === '' ? (
           <TouchableOpacity>
             <Text style={styles.buttonTextEmpty}>
-              E N T E R  Y O U R  N I C K
+              E N T E R Y O U R N I C K
             </Text>
           </TouchableOpacity>
         ) : (
@@ -48,18 +49,18 @@ function WelcomeScreen({navigation}) {
                 params: {name},
               })
             }>
-            <Text style={styles.buttonText}>E N T E R  Y O U R  N I C K</Text>
+            <Text style={styles.buttonText}>E N T E R Y O U R N I C K</Text>
           </TouchableOpacity>
         )}
       </View>
     );
   };
   return (
-    <View style={styles.mainWelcomeScreen}>
+    <KeyboardAwareScrollView contentContainerStyle={styles.mainWelcomeScreen}>
       <StatusBar backgroundColor="#12172e" />
       {renderLogo()}
       {renderEnterName()}
-    </View>
+    </KeyboardAwareScrollView>
   );
 }
 

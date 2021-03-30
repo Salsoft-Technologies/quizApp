@@ -29,7 +29,7 @@ function LoginScreen({navigation}) {
 
   const checkLoginHandler = (email, password) => {
     if ((email === '', password === '')) {
-      alert('Something is wrong');
+      alert('Incorrect email and password');
     } else {
       login(email, password);
     }
@@ -37,7 +37,9 @@ function LoginScreen({navigation}) {
 
   const renderLoginTextBoxes = () => {
     return (
-      <KeyboardAwareScrollView>
+      <KeyboardAwareScrollView
+        bounces={false}
+        showsVerticalScrollIndicator={false}>
         <TextInput
           style={styles.textInputBox}
           onChangeText={(text) => setEmail(text)}

@@ -141,7 +141,7 @@ function MathsQuiz({navigation}) {
   };
 
   const nextQuestion = () => {
-    setRandomValue(Math.floor(Math.random() * Math.floor(10)) + 1)
+    setRandomValue(Math.floor(Math.random() * Math.floor(10)) + 1);
     setIncorrectDisabled(false);
     setCorrectDisabled(false);
     setChecked(false);
