@@ -98,6 +98,7 @@ export default StyleSheet.create({
 
   buttonIncorrectAnswerText: {
     color: '#343b55',
+    alignSelf: 'center',
   },
 
   buttonIncorrectRedAnswerText: {

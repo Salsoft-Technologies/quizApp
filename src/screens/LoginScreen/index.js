@@ -15,7 +15,7 @@ import styles from './styles';
 function LoginScreen({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const {login, googleLogin, fbLogin} = useContext(AuthContext);
+  const {login, googleLogin, fbLogin, user} = useContext(AuthContext);
 
   const renderLogo = () => {
     return (
@@ -30,8 +30,8 @@ function LoginScreen({navigation}) {
   };
 
   const checkLoginHandler = (email, password) => {
-    if ((email === '', password === '')) {
-      alert('Incorrect email and password');
+    if (email === '' && password === '') {
+      alert('Email or Password is missing');
     } else {
       login(email, password);
     }

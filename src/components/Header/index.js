@@ -23,7 +23,8 @@ function Header(props) {
           />
           <View style={styles.headerTextView}>
             <Text style={styles.headerTextStyle}>
-              {user ? props.title : user.email}
+              {/* {user ? props.title : user.email} */}
+              {user.email}
             </Text>
           </View>
         </View>

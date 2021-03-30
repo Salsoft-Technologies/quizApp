@@ -16,7 +16,24 @@ export const AuthProvider = ({children}) => {
           try {
             await auth().signInWithEmailAndPassword(email, password);
           } catch (e) {
+            switch (e.code) {
+              case 'auth/wrong-password':
+                alert('Incorrect Email or Password');
+                break;
+              case 'auth/user-not-found':
+                alert('User does not exist');
+                break;
+              case 'auth/invalid-email':
+                alert('Email does not exist');
+                break;
+              case 'auth/too-many-requests':
+                alert(
+                  'User is temporary disabled due to frequent trying to log in',
+                );
+                break;
+            }
             console.log(e);
+            // alert(e);
           }
         },
 
@@ -34,7 +51,8 @@ export const AuthProvider = ({children}) => {
             // Sign-in the user with the credential
             await auth().signInWithCredential(googleCredential);
           } catch (e) {
-            console.log(e);
+            // console.log(e);
+            alert(e);
           }
         },
 
@@ -65,7 +83,8 @@ export const AuthProvider = ({children}) => {
             // Sign-in the user with the credential
             await auth().signInWithCredential(facebookCredential);
           } catch (e) {
-            console.log(e);
+            // console.log(e);
+            alert(e);
           }
         },
 
@@ -79,6 +98,17 @@ export const AuthProvider = ({children}) => {
             );
             console.log('successful');
           } catch (e) {
+            switch (e.code) {
+              case 'auth/email-already-in-use':
+                alert('Email address already exists');
+                break;
+              case 'auth/invalid-email':
+                alert('Invalid Email');
+                break;
+              case 'auth/weak-password':
+                alert('Weak Password is not allowed');
+                break;
+            }
             console.log(e);
           }
         },

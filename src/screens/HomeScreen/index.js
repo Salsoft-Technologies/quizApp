@@ -12,7 +12,7 @@ import QuizList from '../../components/QuizList/index';
 import styles from './styles';
 
 function HomeScreen({navigation, route}) {
-  const {name} = route.params;
+  // const {name} = route.params;
 
   const renderCard = () => {
     return (
@@ -55,7 +55,8 @@ function HomeScreen({navigation, route}) {
   return (
     <View style={styles.mainScreenView}>
       <StatusBar backgroundColor="#2a2b31" />
-      <Header title={name} />
+      {/* <Header title={name} /> */}
+      <Header />
       {renderCard()}
       {renderTopQuizCategories()}
       <QuizList />

@@ -210,6 +210,7 @@ function MathsQuiz({navigation}) {
             ) : (
               <Image
                 resizeMode="contain"
+                style={{height: 20, width: 20}}
                 source={require('../../assets/images/quizIcons/circle.png')}
               />
             )}
@@ -246,6 +247,7 @@ function MathsQuiz({navigation}) {
             />
           ) : (
             <Image
+              style={{height: 20, width: 20}}
               source={require('../../assets/images/quizIcons/circle.png')}
             />
           )}
