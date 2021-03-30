@@ -38,8 +38,8 @@ export default StyleSheet.create({
   },
 
   mainSettingsScreen: {
-    padding: 3 * vw,
     flex: 1,
     backgroundColor: '#12172e',
+    padding: 3 * vh,
   },
 });

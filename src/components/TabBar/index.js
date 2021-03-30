@@ -13,12 +13,12 @@ const TabBar = ({state, navigation}) => {
     currentTab === selected ? '#e6fafe' : 'transparent';
 
   const renderText = (currentTab) => {
-    currentTab === selected ? 'Home' : ''
-  }
+    currentTab === selected ? 'Home' : '';
+  };
   const handlePress = (activeTab, index) => {
     if (state.index !== index) {
       setSelected(activeTab);
-      
+
       navigation.navigate(activeTab);
     }
   };
@@ -30,7 +30,6 @@ const TabBar = ({state, navigation}) => {
         {routes.map((route, index) => (
           <Tab
             tab={route}
-            
             onPress={() => handlePress(route.name, index)}
             color={renderColor(route.name)}
             key={route.key}
@@ -45,7 +44,7 @@ const TabBar = ({state, navigation}) => {
 const styles = StyleSheet.create({
   wrapper: {
     width,
-    padding: 1.5 * vw,
+    padding: 2 * vw,
     alignItems: 'center',
     justifyContent: 'center',
   },
